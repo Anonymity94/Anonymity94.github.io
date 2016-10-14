@@ -1,0 +1,963 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="fonts.useso.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="《CSS揭秘》," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="《CSS揭秘》代码整理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《CSS揭秘》代码整理">
+<meta property="og:url" content="http://anonymity94.github.io/2016/10/10/CSS-Sercets/index.html">
+<meta property="og:site_name" content="Anonymity94">
+<meta property="og:description" content="《CSS揭秘》代码整理">
+<meta property="og:updated_time" content="2016-10-13T11:22:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《CSS揭秘》代码整理">
+<meta name="twitter:description" content="《CSS揭秘》代码整理">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://anonymity94.github.io/2016/10/10/CSS-Sercets/"/>
+
+
+  <title> 《CSS揭秘》代码整理 | Anonymity94 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Anonymity94</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                《CSS揭秘》代码整理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-10T13:03:52+08:00" content="2016-10-10">
+              2016-10-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/10/CSS-Sercets/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/10/CSS-Sercets/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="边框与背景"><a href="#边框与背景" class="headerlink" title="边框与背景"></a>边框与背景</h2><h3 id="半透明边框"><a href="#半透明边框" class="headerlink" title="半透明边框"></a>半透明边框</h3><ul>
+<li>结果预览</li>
+</ul>
+<div class="translucent-borders-container"><div class="translucent-borders">这里是透明边框的预览区域</div></div>
+
+<ul>
+<li><p>HTML代码</p>
+<pre><code>&lt;div class=&quot;translucent-borders-container&quot;&gt;
+    &lt;div class=&quot;translucent-borders&quot;&gt;这里是透明边框的预览区域&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+    .translucent-borders-container{
+        background: url(&apos;../../images/css-secrets/translucent-borders-bg.jpg&apos;);
+
+        /* styling */
+        padding:50px;
+    }
+
+    .translucent-borders{
+        border: 10px solid hsla(0,0%,100%,.5);
+        background: white;
+        background-clip: padding-box;
+
+        /* styling */
+        max-width: 20em;
+        padding: 2em;
+        margin: 0 auto;
+        font: 100%/1.5 sans-serif;
+    }
+&lt;/style&gt;
+</code></pre></li>
+<li>知识点</li>
+</ul>
+<ol>
+<li>hsla</li>
+<li>em &amp; px</li>
+<li>background-clip</li>
+</ol>
+<hr>
+<h3 id="多重边框"><a href="#多重边框" class="headerlink" title="多重边框"></a>多重边框</h3><h4 id="box-shadow方案"><a href="#box-shadow方案" class="headerlink" title="box-shadow方案"></a>box-shadow方案</h4><ul>
+<li>结果预览</li>
+</ul>
+<div class="multiple-borders"></div>
+
+<ul>
+<li><p>HTML代码</p>
+<pre><code>&lt;div class=&quot;multiple-borders&quot;&gt;&lt;/div&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+    .multiple-borders{
+        width: 100px;
+        height: 60px;
+        margin: 0 auto;
+        box-shadow: 0 0 0 10px #655;
+                    0 0 0 15px deeppink;
+                    0 2px 5px 15px rgba(0,0,0,.6)
+    }
+&lt;/style&gt;
+</code></pre></li>
+<li>知识点</li>
+</ul>
+<ol>
+<li>box-shadow</li>
+</ol>
+<h4 id="outline方案"><a href="#outline方案" class="headerlink" title="outline方案"></a>outline方案</h4><blockquote>
+<p>某些情况下，<strong>你可能只需要两层边框</strong>，那就可以先设置一层常规边框，再加上outline(描边)属性来产生外层的边框。这种方法的一大优点在于边框样式十分灵活，不像上面的box-shadow方案只能模拟实线边框（假设我们需要产生虚线边框效果，box-shadow就没辙了）</p>
+</blockquote>
+<ul>
+<li>结果预览</li>
+</ul>
+<div class="multiple-borders-outline"></div>
+
+<ul>
+<li><p>HTML代码</p>
+<pre><code>&lt;div class=&quot;multiple-borders-outline&quot;&gt;&lt;/div&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+    .multiple-borders-outline{
+        width: 100px;
+        height: 60px;
+        margin: 0 auto;
+        /* 注意：outline属性实现的边框暂不支持圆角 */
+        border-radius: 10px;
+
+        background: yellowgreen;
+        outline: 5px solid deeppink;
+    }
+&lt;/style&gt;
+</code></pre></li>
+<li>知识点</li>
+</ul>
+<ol>
+<li>box-shadow</li>
+</ol>
+<hr>
+<h2 id="灵活的背景定位"><a href="#灵活的背景定位" class="headerlink" title="灵活的背景定位"></a>灵活的背景定位</h2><h3 id="background-position的拓展语法方案"><a href="#background-position的拓展语法方案" class="headerlink" title="background-position的拓展语法方案"></a>background-position的拓展语法方案</h3><ul>
+<li>结果预览</li>
+</ul>
+<div class="extenged-bg-position">background-position的拓展语法方案</div>
+
+<ul>
+<li><p>HTML代码</p>
+<pre><code>&lt;div class=&quot;extenged-bg-position&quot;&gt;background-position的拓展语法方案&lt;/div&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+    .extenged-bg-position{
+        background: url(&apos;../../images/css-secrets/code-pirate.svg&apos;) 
+                    no-repeat bottom right #58a;
+        background-position: right 20px bottom 10px;
+
+        /* styling */
+        width: 400px;
+        height: 200px;
+        padding: 10px;
+        margin: 0 auto;
+        color: white;
+    }
+&lt;/style&gt;
+</code></pre></li>
+<li>知识点</li>
+</ul>
+<ol>
+<li>background-position</li>
+</ol>
+<h3 id="background-origin方案"><a href="#background-origin方案" class="headerlink" title="background-origin方案"></a>background-origin方案</h3><ul>
+<li>结果预览</li>
+</ul>
+<div class="background-origin">background-origin方案</div>
+
+<ul>
+<li><p>HTML代码</p>
+<pre><code>&lt;div class=&quot;background-origin&quot;&gt;background-origin方案&lt;/div&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+    .background-origin{
+        background: url(&apos;../../images/css-secrets/code-pirate.svg&apos;)
+                    no-repeat bottom right #58a;
+        /* 盒模型 */
+        background-origin: content-box;
+
+        /* styling */
+        width: 400px;
+        height: 200px;
+        padding: 10px;
+        margin: 0 auto;
+        color: white;
+    }
+&lt;/style&gt;
+</code></pre></li>
+<li>知识点</li>
+</ul>
+<ol>
+<li>盒模型</li>
+</ol>
+<h3 id="calc-方案"><a href="#calc-方案" class="headerlink" title="calc()方案"></a>calc()方案</h3><ul>
+<li>结果预览</li>
+</ul>
+<div class="background-position-calc">calc()方案</div>
+
+<ul>
+<li><p>HTML代码</p>
+<pre><code>&lt;div class=&quot;background-position-calc&quot;&gt;calc()方案方案&lt;/div&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+    .background-position-calc{
+        background: url(&apos;../../images/css-secrets/code-pirate.svg&apos;)
+                    no-repeat bottom right #58a;
+        /* calc()函数 */
+        background-position: calc(100% - 20px) calc(100% - 10px);
+
+        /* styling */
+        width: 400px;
+        height: 200px;
+        padding: 10px;
+        margin: 0 auto;
+        color: white;
+    }
+&lt;/style&gt;
+</code></pre></li>
+<li>知识点</li>
+</ul>
+<ol>
+<li>calc()函数</li>
+</ol>
+<hr>
+<h2 id="边框内圆角"><a href="#边框内圆角" class="headerlink" title="边框内圆角"></a>边框内圆角</h2><h3 id="使用2个DIV元素"><a href="#使用2个DIV元素" class="headerlink" title="使用2个DIV元素"></a>使用2个<code>DIV</code>元素</h3><ul>
+<li>结果预览</li>
+</ul>
+<div class="something-meaningful"><div>使用2个 DIV 元素实现边框内圆角效果</div></div>
+
+<ul>
+<li><p>HTML代码</p>
+<pre><code>//2个div嵌套，子div圆角处露出父辈div的background
+
+&lt;div class=&quot;something-meaningful&quot;&gt;&lt;div&gt;使用2个 DIV 元素实现边框内圆角效果&lt;/div&gt;&lt;/div&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+    .something-meaningful{
+        background: #655;
+        padding: .8em;
+    }
+
+    .something-meaningful &gt; div{
+        background: tan;
+        border-radius: .8em;
+        padding: 1em;
+    }
+&lt;/style&gt;
+</code></pre></li>
+</ul>
+<h3 id="使用1个DIV元素"><a href="#使用1个DIV元素" class="headerlink" title="使用1个DIV元素"></a>使用1个<code>DIV</code>元素</h3><ul>
+<li>结果预览</li>
+</ul>
+<div class="inner-rounding">使用1个 DIV 元素实现边框内圆角效果</div>
+
+<ul>
+<li><p>HTML代码</p>
+<pre><code>&lt;div class=&quot;inner-rounding&quot;&gt;使用1个 DIV 元素实现边框内圆角效果&lt;/div&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+    .inner-rounding{
+        border-radius: .8em;
+        padding: 1em;
+        background: tan;
+
+        outline: #655 solid .6em;
+        box-shadow: 0 0 0 .4em #655;
+    }
+&lt;/style&gt;
+</code></pre></li>
+<li><p>知识点</p>
+</li>
+</ul>
+<ol>
+<li>box-shadow</li>
+<li>outline</li>
+<li>『多重边框』</li>
+</ol>
+<hr>
+<h2 id="条纹背景"><a href="#条纹背景" class="headerlink" title="条纹背景"></a>条纹背景</h2><h3 id="水平条纹"><a href="#水平条纹" class="headerlink" title="水平条纹"></a>水平条纹</h3><ul>
+<li>结果预览</li>
+</ul>
+<div class="horizontal-stripes-contianer"><div class="horizontal-stripes-item one">我是颜色渐变效果</div><div class="horizontal-stripes-item two">我是水平条纹效果</div></div>
+
+<ul>
+<li><p>HTML代码</p>
+<pre><code>&lt;div class=&quot;horizontal-stripes-contianer&quot;&gt;
+    &lt;div class=&quot;horizontal-stripes-item one&quot;&gt;
+        我是颜色渐变效果
+    &lt;/div&gt;
+    &lt;div class=&quot;horizontal-stripes-item two&quot;&gt;
+        我是水平条纹效果
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+    .horizontal-stripes-contianer{
+        height: 220px;
+    }
+    .horizontal-stripes-item{
+        height: 100px;
+    }
+    .horizontal-stripes-item.one{
+        background: linear-gradient(#fb3 20%,#58a 80%);
+        background-size: 100% 30px;
+    }
+    .horizontal-stripes-item.two{
+        margin-top: 20px;
+        background: linear-gradient(#fb3 50%,#58a 0);
+        background-size: 100% 30px;
+    }
+&lt;/style&gt;
+</code></pre></li>
+<li><p>知识点</p>
+</li>
+</ul>
+<ol>
+<li>background</li>
+<li>background-size</li>
+</ol>
+<hr>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><hr>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/《CSS揭秘》/" rel="tag">#《CSS揭秘》</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/17/2016-03-17-Forum-Instructions/" rel="next" title="论坛启动说明">
+                <i class="fa fa-chevron-left"></i> 论坛启动说明
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/12/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/10/10/CSS-Sercets/"
+     data-title="《CSS揭秘》代码整理"
+     data-content=""
+     data-url="http://anonymity94.github.io/2016/10/10/CSS-Sercets/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/10/CSS-Sercets/"
+           data-title="《CSS揭秘》代码整理" data-url="http://anonymity94.github.io/2016/10/10/CSS-Sercets/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/Anonymity94.JPG"
+               alt="Anonymity94" />
+          <p class="site-author-name" itemprop="name">Anonymity94</p>
+          <p class="site-description motion-element" itemprop="description">好在不忘追寻,纵有得到失去</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/anonymity94" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/3119705697/profile?topnav=1&wvr=6" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#边框与背景"><span class="nav-number">1.</span> <span class="nav-text">边框与背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#半透明边框"><span class="nav-number">1.1.</span> <span class="nav-text">半透明边框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多重边框"><span class="nav-number">1.2.</span> <span class="nav-text">多重边框</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#box-shadow方案"><span class="nav-number">1.2.1.</span> <span class="nav-text">box-shadow方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#outline方案"><span class="nav-number">1.2.2.</span> <span class="nav-text">outline方案</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#灵活的背景定位"><span class="nav-number">2.</span> <span class="nav-text">灵活的背景定位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#background-position的拓展语法方案"><span class="nav-number">2.1.</span> <span class="nav-text">background-position的拓展语法方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#background-origin方案"><span class="nav-number">2.2.</span> <span class="nav-text">background-origin方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#calc-方案"><span class="nav-number">2.3.</span> <span class="nav-text">calc()方案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#边框内圆角"><span class="nav-number">3.</span> <span class="nav-text">边框内圆角</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用2个DIV元素"><span class="nav-number">3.1.</span> <span class="nav-text">使用2个DIV元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用1个DIV元素"><span class="nav-number">3.2.</span> <span class="nav-text">使用1个DIV元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条纹背景"><span class="nav-number">4.</span> <span class="nav-text">条纹背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#水平条纹"><span class="nav-number">4.1.</span> <span class="nav-text">水平条纹</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#未完待续"><span class="nav-number"></span> <span class="nav-text">未完待续</span></a></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Anonymity94</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"anonymity94"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="//cdn.jsdelivr.net/ua-parser.js/0.7.10/ua-parser.min.js"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
