@@ -109,9 +109,9 @@ export default {
       position: absolute;
       width: 100%;
       height: 2px;
-      bottom: 0;
+      bottom: -8px;
       left: 0;
-      background-color: #000;
+      background-color: #555;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       -moz-transform: scaleX(0);

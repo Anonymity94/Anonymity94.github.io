@@ -11,13 +11,7 @@
         {{ new Date($frontmatter.createTime).format('YYYY-MM-DD') }}
       </time>
     </span>
-    <span
-      class="post-meta-item-icon"
-      v-if="$page.frontmatter.tags"
-    >
-      &nbsp; | &nbsp;
-    </span>
-    <span
+    <div
       v-if="$page.frontmatter.tags"
       class="post-category"
     >
@@ -26,12 +20,12 @@
           :to="'/archive/?tag=' + tag"
           v-for="tag in $page.frontmatter.tags"
         >
-          <span class="tag">
+          <span class="tag sm">
             {{tag}}
           </span>
         </router-link>
       </span>
-    </span>
+    </div>
   </div>
 </template>
 
@@ -54,7 +48,25 @@ export default {
 </script>
 <style lang="less" scoped>
 .post-meta {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #909399;
+}
+.post-time {
+  display: inline-block;
+  line-height: 24px;
+}
+.post-category {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+}
+@media (max-width: 719px) {
+  .post-time {
+    margin-bottom: 10px;
+  }
+  .post-category {
+    display: block;
+    margin-left: 0;
+  }
 }
 </style>

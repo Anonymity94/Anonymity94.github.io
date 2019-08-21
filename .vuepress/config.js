@@ -18,7 +18,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'zh-CN',
-      description: '232323'
+      description: 'Just do IT.'
     }
   },
   serviceWorker: {},
@@ -48,6 +48,6 @@ module.exports = {
   },
   plugins: [['@vuepress/back-to-top', true], ['@vuepress/medium-zoom', true]],
   markdown: {
-    lineNumbers: true
+    lineNumbers: false // 是否显示行号
   }
 }

@@ -1,8 +1,7 @@
 ---
 createTime: 2019-05-08T14:23:53+08:00
-category: article
 tags: 
-	- Mongo
+	- mongo
 ---
 
 # Mongo副本集
@@ -10,7 +9,7 @@ tags:
 <ArticleMeta />
 
 > 安装参考：
-> https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/
+> [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/)
 
 
 > 测试服务器
@@ -128,7 +127,7 @@ $ db.shutdownServer()
 
 ## 初始化副本集
 
-> https://www.cnblogs.com/ljai/p/4898475.html
+> [https://www.cnblogs.com/ljai/p/4898475.html](https://www.cnblogs.com/ljai/p/4898475.html)
 
 ```shell
 $ mongo
@@ -289,24 +288,24 @@ replset:PRIMARY> rs.status()
 # 1.1 进入 10.0.0.155
 $ mongo
 
-$ replset:PRIMARY> db.person.insert({"name": "马志远", "age": 26})
+$ replset:PRIMARY> db.person.insert({"name": "张三", "age": 26})
 # 输出 WriteResult({ "nInserted" : 1 })
 
-$ replset:PRIMARY> db.person.insert({"name": "王孟宽", "age": 23})
+$ replset:PRIMARY> db.person.insert({"name": "李四", "age": 23})
 # 输出 WriteResult({ "nInserted" : 1 })
 
 # 1.2 查看插入到 155 的数据
 $ replset:PRIMARY> db.person.find()
-{ "_id" : ObjectId("5c6e653c1a3a9f9119c3c24f"), "name" : "马志远", "age" : 26 }
-{ "_id" : ObjectId("5c6e65851a3a9f9119c3c250"), "name" : "王孟宽", "age" : 23 }
+{ "_id" : ObjectId("5c6e653c1a3a9f9119c3c24f"), "name" : "张三", "age" : 26 }
+{ "_id" : ObjectId("5c6e65851a3a9f9119c3c250"), "name" : "李四", "age" : 23 }
 
 # 1.3 停掉155数据库，连接156数据库,查看状态发现156 变成了PRIMARY
 $ mongo
 > rs.status();
 # 1.4 156上查询数据，发现数据已经同步过来了
 > db.person.find();
-{ "_id" : ObjectId("5c6e653c1a3a9f9119c3c24f"), "name" : "马志远", "age" : 26 }
-{ "_id" : ObjectId("5c6e65851a3a9f9119c3c250"), "name" : "王孟宽", "age" : 23 }
+{ "_id" : ObjectId("5c6e653c1a3a9f9119c3c24f"), "name" : "张三", "age" : 26 }
+{ "_id" : ObjectId("5c6e65851a3a9f9119c3c250"), "name" : "李四", "age" : 23 }
 
 # ==========================================================================
 #  测试二，在PRIMARY(2) 上写数据，然后关闭PRIMARY(2)
@@ -314,19 +313,19 @@ $ mongo
 #  观察PRIMARY(2)上写的数据是否会同步到PRIMARY(1)上
 # ==========================================================================
 # 2.1 156上插入新数据
-$ replset:PRIMARY> db.person.insert({"name": "王富成", "age": 25})
+$ replset:PRIMARY> db.person.insert({"name": "王五", "age": 25})
 # 输出 WriteResult({ "nInserted" : 1 })
 $ replset:PRIMARY> db.person.find()
-{ "_id" : ObjectId("5c6e653c1a3a9f9119c3c24f"), "name" : "马志远", "age" : 26 }
-{ "_id" : ObjectId("5c6e65851a3a9f9119c3c250"), "name" : "王孟宽", "age" : 23 }
-{ "_id" : ObjectId("5c6e690375369bb4020815d7"), "name" : "王富成", "age" : 25 }
+{ "_id" : ObjectId("5c6e653c1a3a9f9119c3c24f"), "name" : "张三", "age" : 26 }
+{ "_id" : ObjectId("5c6e65851a3a9f9119c3c250"), "name" : "李四", "age" : 23 }
+{ "_id" : ObjectId("5c6e690375369bb4020815d7"), "name" : "王五", "age" : 25 }
 
 # 2.2 启动155数据库，关闭156数据库，发现155数据库回重新变成在PRIMARY身份
 # 2.3 进入155数据库，查询，发现156上新增的数据也被同步过来了
 $ replset:PRIMARY> db.person.find()
-{ "_id" : ObjectId("5c6e653c1a3a9f9119c3c24f"), "name" : "马志远", "age" : 26 }
-{ "_id" : ObjectId("5c6e65851a3a9f9119c3c250"), "name" : "王孟宽", "age" : 23 }
-{ "_id" : ObjectId("5c6e690375369bb4020815d7"), "name" : "王富成", "age" : 25 }
+{ "_id" : ObjectId("5c6e653c1a3a9f9119c3c24f"), "name" : "张三", "age" : 26 }
+{ "_id" : ObjectId("5c6e65851a3a9f9119c3c250"), "name" : "李四", "age" : 23 }
+{ "_id" : ObjectId("5c6e690375369bb4020815d7"), "name" : "王五", "age" : 25 }
 
 # ==========================================================================
 #  测试三，写入大量数据，观察数据同步是否成功

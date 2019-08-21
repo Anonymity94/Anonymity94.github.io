@@ -1,6 +1,5 @@
 ---
 createTime: 2019-02-28T14:28:53+08:00
-category: article
 tags:
   - etcd
 ---
