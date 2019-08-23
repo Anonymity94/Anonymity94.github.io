@@ -2,4 +2,4 @@
 sidebar: false
 ---
 
-<ArticleList tabKey="/articles/"/>
+<ArticleLayout tabKey="/articles/"/>

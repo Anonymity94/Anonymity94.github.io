@@ -1,44 +1,63 @@
 <template>
-  <div class="post-wrap">
-    <div v-if="currentNav">
-      <h1>{{ currentNav.text }}<span class="post-number">[共计{{ articles.length }}篇文章]</span>
-      </h1>
-      <ul class="posts">
-        <li
-          v-for="item in articles"
-          class="post-item"
-          :data-tags="item.frontmatter.tags"
+  <div class="posts">
+    <section
+      class="post-preview"
+      v-bind:class="{showYear: showYear}"
+      v-for="(item, index) in articles"
+    >
+      <div
+        class="seperator"
+        v-if="showYear && (index === 0 || (index >=1 && item.createYear !== articles[index - 1].createYear))"
+      >
+        <span class="text">{{ item.createYear }}</span>
+      </div>
+      <div
+        class="post-item"
+        :data-tags="item.tags"
+      >
+        <h1
+          class="post-item-title"
+          itemprop="name headline"
         >
-          <h1
-            class="post-item-title"
-            itemprop="name headline"
-          >
-            <router-link
-              :to="item.regularPath"
-              class="post-item-title-link"
-            >{{ item.title }}</router-link>
-          </h1>
-          <span
-            v-if="item.frontmatter.createTime"
-            :datetime="item.frontmatter.createTime"
-          >{{ new Date(item.frontmatter.createTime).format('YYYY-MM-DD') }}</span>
-        </li>
-      </ul>
-    </div>
-    <div v-else>
-      <p>error category</p>
-    </div>
+          <router-link
+            :to="item.regularPath"
+            class="post-item-title-link"
+          >{{ item.title || '[标题丢失了]' }}</router-link>
+        </h1>
+        <span
+          v-if="item.createTime"
+          :datetime="item.createTime"
+        >{{ new Date(item.createTime).format('YYYY-MM-DD') }}</span>
+      </div>
+    </section>
+    <section v-if="articles.length === 0">
+      <div class="empty">
+        <img :src="emptyImg" />
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import emptyImg from '@static/assets/empty.svg'
+
 export default {
   components: {},
-  props: ['tabKey'],
+  props: {
+    'articles': {
+      type: Array,
+      required: true,
+      default: []
+    },
+    'showYear': {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
   data() {
     return {
-      currentNav: undefined,
-      articles: [],
+      emptyImg
     }
   },
   watch: {},
@@ -47,38 +66,32 @@ export default {
   created() {
   },
   mounted() {
-    // 当前的分类
-    const tabKey = this.tabKey;
-    // 所有的分类
-    const navs = this.$themeLocaleConfig.nav
-    const currentNav = navs.find(item => item.link === tabKey)
-    this.currentNav = currentNav
-    if (currentNav) {
-      // 查找此分类下的文章
-      console.log(this.$site.pages)
-      const articles = this.$site.pages.filter(item => item.path.indexOf(currentNav.link) > -1 && item.path !== currentNav.link)
-      this.articles = articles.sort((a, b) => new Date(b.frontmatter.createTime) - new Date(a.frontmatter.createTime));
-    }
+    console.log(this.articles.length)
   }
 }
 </script>
 <style lang="less" scoped>
-.post-number {
-  font-size: 1.35rem;
-  margin-left: 10px;
-}
-
 .posts {
   list-style: none;
   padding: 0;
 
-  & > li + li {
-    border-top: 1px solid #eee;
+  .post-preview {
+    &.showYear .post-item {
+      margin-left: 20px;
+    }
+    & > .seperator + .post-item {
+      border-top: none;
+    }
+    &:first-child {
+      .post-item {
+        border-top: none;
+      }
+    }
   }
 
   .post-item {
-    list-style: none;
-    padding: 10px 0;
+    border-top: 1px solid #eee;
+    padding: 5px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,8 +105,9 @@ export default {
 
 .post-item-title {
   position: relative;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
+  margin-top: 20px;
 
   .post-item-title-link {
     display: inline-block;
@@ -131,5 +145,18 @@ export default {
       transform: scaleX(1);
     }
   }
+}
+
+.seperator {
+  margin: 30px 0 10px;
+  .text {
+    color: #0085a1;
+    font-size: 20px;
+  }
+}
+
+.empty {
+  margin-top: 100px;
+  text-align: center;
 }
 </style>

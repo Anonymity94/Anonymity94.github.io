@@ -30,4 +30,55 @@ export default ({
         )
     return fmt
   }
+
+  const articlePathKeyword = '/articles/'
+  // 过滤出所有的文章
+  const articles = siteData.pages
+    .map(article => ({
+      ...article,
+      tags: article.frontmatter.tags || [],
+      createTime: article.frontmatter.createTime || '',
+      createYear: article.frontmatter.createTime
+        ? new Date(article.frontmatter.createTime).format('YYYY')
+        : '未知年份'
+    }))
+    .filter(
+      page =>
+        page.path.indexOf(articlePathKeyword) > -1 &&
+        page.path !== articlePathKeyword
+    )
+
+  // 按时间排序
+  siteData.themeConfig.articles = articles.sort(
+    (a, b) => new Date(b.createTime) - new Date(a.createTime)
+  )
+
+  // 过滤出所有的标签
+  let tags = []
+  for (let i = 0; i < articles.length; i++) {
+    const _tags = articles[i].frontmatter.tags
+    if (Array.isArray(_tags) && _tags.length > 0) {
+      tags.push(..._tags)
+    }
+  }
+  // 去重
+  tags = [...new Set(tags)]
+  const NO_TAG_TEXT = '其它'
+  tags.push(NO_TAG_TEXT)
+  siteData.themeConfig.tags = tags
+
+  // 按 tag 分组
+  const groupByTag = {}
+  for (let i = 0; i < tags.length; i++) {
+    const currentTag = tags[i]
+    const collection = articles.filter(article => {
+      const articleTags = article.tags
+      if (currentTag === NO_TAG_TEXT) {
+        return !articleTags || articleTags.length === 0
+      }
+      return articleTags && articleTags.indexOf(currentTag) > -1
+    })
+    groupByTag[currentTag] = collection
+  }
+  siteData.themeConfig.groupByTag = groupByTag
 }

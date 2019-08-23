@@ -2,4 +2,4 @@
 sidebar: false
 ---
 
-# 归档
+<Archive />

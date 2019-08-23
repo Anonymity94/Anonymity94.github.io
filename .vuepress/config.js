@@ -8,10 +8,14 @@ module.exports = {
   base: '/',
   title: 'Anonymity94',
   port: 8080,
+  head: [
+    ['link', { rel: 'icon', href: '/avatar.png' }],
+    ['meta', { author: 'anonymity94' }]
+  ],
   configureWebpack: {
     resolve: {
       alias: {
-        '@': resolve('../static')
+        '@static': resolve('../static')
       }
     }
   },
