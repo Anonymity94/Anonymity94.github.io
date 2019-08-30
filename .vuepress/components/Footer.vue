@@ -4,20 +4,14 @@
       <div class="copyright">
         ©
         <span itemprop="copyrightYear">2019</span>
-        <span class="with-love">
-          <i class="fa fa-heart"></i>
-        </span>
-        <span
-          class="author"
-          itemprop="copyrightHolder"
-        >Anonymity94</span>
+        🧐
+        <span class="author" itemprop="copyrightHolder">Anonymity94</span>
       </div>
 
       <div class="powered-by">
-        由 <a
-          class="theme-link"
-          href="https://vuepress.vuejs.org/zh/"
-        >VuePress</a> 强力驱动
+        由
+        <a class="theme-link" href="https://vuepress.vuejs.org/zh/">VuePress</a>
+        强力驱动
       </div>
     </div>
   </footer>
