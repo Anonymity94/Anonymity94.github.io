@@ -6,6 +6,8 @@ tags:
 
 # 常用快捷键技巧
 
+<ArticleMeta />
+
 <style>
 table th:first-of-type {
 	width: 180px;

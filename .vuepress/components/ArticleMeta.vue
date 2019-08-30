@@ -42,7 +42,6 @@ export default {
   methods: {},
   created() { },
   mounted() {
-    console.log('$page', this.$page)
   }
 }
 </script>

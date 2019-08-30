@@ -66,7 +66,6 @@ export default {
   created() {
   },
   mounted() {
-    console.log(this.articles.length)
   }
 }
 </script>
