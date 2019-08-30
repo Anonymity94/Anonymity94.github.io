@@ -47,7 +47,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .post-meta {
-  margin-bottom: 10px;
+  margin: 10px 0;
   color: #909399;
 }
 .post-time {
