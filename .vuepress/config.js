@@ -29,8 +29,12 @@ module.exports = {
   themeConfig: {
     repo: 'Anonymity94',
     sidebar: 'auto',
+
+    docsRepo: 'Anonymity94/Anonymity94.github.io',
+    // 假如文档放在一个特定的分支下：
+    docsBranch: 'v2',
     lastUpdated: '',
-    editLinks: false,
+    editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     serviceWorker: {
       updatePopup: {
