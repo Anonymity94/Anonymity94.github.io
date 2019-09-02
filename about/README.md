@@ -5,13 +5,13 @@ editLink: false
 
 # About
 
-👉 **I am a Web Developer, focus on:**
+👉 **I am a Web Developer, focus on:**
 - JavaScript
 - Node.js
 
 ---
 
-👉 **Skill points:**
+👉 **Skill points:**
 - React
 - Vue
 - 公众号开发(😅)
@@ -19,6 +19,6 @@ editLink: false
 
 ---
 
-👉 **Learning in progress:**
+👉 **Learning in progress:**
 - Flutter
 - GraphQL
