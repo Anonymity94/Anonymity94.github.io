@@ -32,6 +32,9 @@ tags:
             width: 90px;
             height: 90px;
         }
+        img {
+          box-shadow: none !important;
+        }
         p {
             color: #E10098;
             margin: 0;

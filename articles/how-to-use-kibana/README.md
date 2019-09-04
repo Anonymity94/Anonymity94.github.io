@@ -37,6 +37,7 @@ tags:
 - `status:[400 TO 499] AND (extension:php OR extension:html)` 查找状态代码 400-499 以及扩展名 php 或 html
 
 ### 按字段过滤
+
 ![discover-filter](./discover-filter.png)
 
 - 列表展示某个字段: 
@@ -66,13 +67,16 @@ Visualize使您可以在Elasticsearch索引中创建数据的可视化。然后�
 示例：**TCP上下行流量折线图** 
 
 #### 1. 选择可视化类型
+
 ![选择可视化类型](./visualize-new-step-1.png)
 
 #### 2. 选择索引模式
+
 ![选择数据源](./visualize-new-step-2.png)
 
 #### 3. 进入编辑页面
 上述步骤后，我们可以看到一个初始化的折线图
+
 ![编辑页面](./visualize-new-step-3.png)
 
 #### 4. 编辑 X 轴信息
@@ -92,6 +96,7 @@ Visualize使您可以在Elasticsearch索引中创建数据的可视化。然后�
 ![编辑y轴](./visualize-new-step-5.png)
 
 #### 6.修改线条的颜色标志
+
 ![编辑y轴](./visualize-new-step-6.png)
 
 
@@ -99,6 +104,7 @@ Visualize使您可以在Elasticsearch索引中创建数据的可视化。然后�
 Kibana 仪表板是可视化，搜索和地图的集合，通常是实时的。仪表板提供对数据的一览式洞察，使您能够深入了解详细信息。
 
 ### 添加面板
+
 ![添加面板](./dashboard-add-panel.png)
 
 ### 调整面板
@@ -132,11 +138,15 @@ Canvas是位于Kibana内的数据可视化和演示工具。使用Canvas，您�
 ### 创建异常检测作业
 
 #### 选择数据源
+
 ![选择数据源](./ml-new-multi-metric-job-select-data-source.png)
 
 #### 选择作业模式
+
 ![选择作业模式](./ml-new-multi-metric-job-select-type.png)
 
 - 多指标作业
+
 ![创建作业](./ml-new-multi-metric-job-create.png)
+
 ![创建完成](./ml-new-multi-metric-job-finish.png)
