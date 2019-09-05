@@ -38,6 +38,7 @@ sidebar: auto
 
 ### Node.js
 
+- [Midway](https://midwayjs.org/)
 - [Egg](https://eggjs.org/zh-cn/)
 - [Koa](https://koa.bootcss.com/)
 - [Express](http://www.expressjs.com.cn/)
@@ -136,6 +137,8 @@ sidebar: auto
 ## 正则表达式
 
 - [一次性搞懂 JavaScript 正则表达式之语法](https://mp.weixin.qq.com/s/kDdikreTxYVFxXMQB6cYlA)
+- [https://regex101.com/](https://regex101.com/)
+- [https://regexr.com/](https://regexr.com/)
 
 ## 工具
 
