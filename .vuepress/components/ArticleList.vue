@@ -157,5 +157,9 @@ export default {
 .empty {
   margin-top: 100px;
   text-align: center;
+
+  img {
+    box-shadow: none;
+  }
 }
 </style>
