@@ -6,7 +6,7 @@ tags:
   - redis
 ---
 
-# 集群常用命名汇总
+# 集群常用命令汇总
 
 <ArticleMeta />
 
