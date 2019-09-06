@@ -27,8 +27,7 @@ export default {
   watch: {},
   computed: {},
   methods: {},
-  created() {
-    },
+  created() {},
   mounted() {
     // 当前的分类
     const tabKey = this.tabKey;
