@@ -33,7 +33,7 @@ module.exports = {
     docsRepo: 'Anonymity94/Anonymity94.github.io',
     // 假如文档放在一个特定的分支下：
     docsBranch: 'v2',
-    lastUpdated: '',
+    lastUpdated: '上次更新',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     serviceWorker: {
