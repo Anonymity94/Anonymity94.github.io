@@ -129,6 +129,7 @@ sidebar: auto
 - [D3.js](https://d3js.org/)
 - [Three.js](https://threejs.org/)
 - [AntV](https://antv.alipay.com/zh-cn/index.html)
+- [Zdog](https://zzz.dog/)
 - [Kibana](https://www.elastic.co/cn/products/kibana)
 - [ThingJS - 物联网 3D 可视化平台](http://www.thingjs.com/guide/)
 - [最好的 JavaScript 数据可视化库都在这里了](https://mp.weixin.qq.com/s/jdPgWwSEVTX06zJvXlsmOg)
@@ -137,6 +138,8 @@ sidebar: auto
 ## 正则表达式
 
 - [一次性搞懂 JavaScript 正则表达式之语法](https://mp.weixin.qq.com/s/kDdikreTxYVFxXMQB6cYlA)
+- [正则表达式全集](http://tool.oschina.net/uploads/apidocs/jquery/regexp.html)
+- [还不会正则表达式？看这篇！](https://mp.weixin.qq.com/s/f6ii_hKgY0gLdhMFda6S6Q)
 - [https://regex101.com/](https://regex101.com/)
 - [https://regexr.com/](https://regexr.com/)
 
