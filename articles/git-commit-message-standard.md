@@ -1,5 +1,6 @@
 ---
 createTime: 2019-07-23T16:22:53+08:00
+sidebar: false
 tags:
   - Git
 ---
