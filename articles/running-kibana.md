@@ -19,7 +19,7 @@ tags:
 
 ## 构建
 
-```shell
+```bash
 wangfuchengdeMac-mini:kibana-7.0.1 wangfucheng$ yarn kbn bootstrap
 yarn run v1.17.3
 $ node scripts/kbn bootstrap
@@ -154,7 +154,7 @@ Bootstrapping completed!
 
 **Q1: chromedriver: Command failed.**
 
-```shell
+```bash
 error /Users/wangfucheng/coading/elk/kibana-7.0.1/node_modules/chromedriver: Command failed.
 Exit code: 1
 Command: node install.js
@@ -179,7 +179,7 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 
 **Q2: `pre-commit`导致的问题**
 
-```shell
+```bash
 kibana: fail Kibana pre-commit git hook was not installed as an error occur.
 kibana: ERROR fatal: 不是一个 git 仓库（或者任何父目录）：.git
 ✖ kibana: fatal: 不是一个 git 仓库（或者任何父目录）：.git

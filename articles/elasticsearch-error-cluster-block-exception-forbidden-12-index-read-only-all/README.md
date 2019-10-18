@@ -70,7 +70,7 @@ curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_cluster/se
 ```
 或者是直接修改 `elasticsearch.yml` 配置文件
 
-```yml
+```yaml
 cluster.routing.allocation.disk.threshold_enabled: false
 ```
 

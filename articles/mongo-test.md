@@ -24,7 +24,7 @@ tags:
 Configure the package management system (yum).
 Create a `/etc/yum.repos.d/mongodb-org-4.0.repo` file so that you can install MongoDB directly using yum:
 
-````shell
+````bash
 [mongodb-org-4.0]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.0/x86_64/
@@ -35,20 +35,20 @@ gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc
 
 ## 安装
 
-````shell
+````bash
 sudo yum install -y mongodb-org
 ````
 
 ## 查看安装的位置
 
-```shell
+```bash
 [root@localhost ~]# whereis mongod
 mongod: /usr/bin/mongod /etc/mongod.conf /usr/share/man/man1/mongod.1
 ```
 
 ## 每台服务器建立副本集测试文件夹
 
-````shell
+````bash
 #存放整个mongodb文件
 mkdir -p /data/mongodbtest/replset
 
@@ -129,7 +129,7 @@ $ db.shutdownServer()
 
 > [https://www.cnblogs.com/ljai/p/4898475.html](https://www.cnblogs.com/ljai/p/4898475.html)
 
-```shell
+```bash
 $ mongo
 > use admin
 # 定义副本集配置
@@ -157,7 +157,7 @@ $ mongo
 
 ## 查看副本集状态
 
-```shell
+```bash
 replset:PRIMARY> rs.status()
 {
 	"set" : "replset",
@@ -280,7 +280,7 @@ replset:PRIMARY> rs.status()
 
 # 测试数据同步
 
-```shell
+```bash
 # ==========================================================================
 #  测试一，PRIMARY(1)上写数据，然后关闭PRIMARY（1）
 #  从新的PRIMARY（2）主机上查看，看数据是否同步
@@ -396,7 +396,7 @@ $ db.peopleTest.find().count()
 
 ### 1主1备：停掉一个节点
 
-```shell
+```bash
 # 在3个节点的情况下，移除 10.0.0.155
 $ rs.remove("10.0.0.155:27017")
  { "ok" : 1 }
@@ -414,7 +414,7 @@ $ rs.remove("10.0.0.155:27017")
 
 ### 1主1备1仲裁
 
-```shell
+```bash
 # 在1主1备2个节点的情况下，添加一个仲裁节点
 # 仲裁节点，监控其他节点状态，参与选主投票，不参与数据保存
 # 方法一
@@ -574,7 +574,7 @@ $ replset:ARBITER> rs.status()
 
 再次启动主节点mongo时会报错：由于异常退出数据库导致的错误。**异常**
 
-```shell
+```bash
 [root@localhost data]# /usr/bin/mongod -f /data/mongodbtest/replset/mongod.conf
 about to fork child process, waiting until server is ready for connections.
 forked process: 2041

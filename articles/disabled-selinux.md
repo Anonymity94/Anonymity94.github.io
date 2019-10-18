@@ -26,8 +26,8 @@ SELinux 主要作用就是最大限度地减小系统中服务进程可访问的
 
 执行命令 `getenforce` 查看 SELinux 当前的模式。
 
-```shell
-$ getenforce
+```bash
+getenforce
 ```
 
 ### 模式
@@ -37,13 +37,13 @@ $ getenforce
 - disabled：关闭
 
 ### 临时关闭
-```shell
+```bash
 # 临时关闭 SELinux（不需要重启服务器）
 setenforce 0
 ```
 
 ### 永久关闭
-```shell
+```bash
 # 永久关闭 SELinux（机器重启后会生效）
 sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
 sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/sysconfig/selinux

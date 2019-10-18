@@ -10,7 +10,7 @@ tags:
 
 ## 下载
 
-```shell
+```bash
 https://github.com/etcd-io/etcd/releases
 ```
 
@@ -20,19 +20,19 @@ https://github.com/etcd-io/etcd/releases
 
 ## 解压
 
-```shell
+```bash
 tar xzvf etcd-v3.3.12-linux-amd64.tar.gz -C /tmp/etcd-download-test --strip-components=1
 ```
 
 ## 启动
 
-```shell
+```bash
 /tmp/etcd-download-test/etcd
 ```
 
 ## 查看版本
 
-```shell
+```bash
 $ /tmp/etcd-download-test/etcd --version
 $ ETCDCTL_API=3 /tmp/etcd-download-test/etcdctl version
 
@@ -43,28 +43,28 @@ $ curl 127.0.0.1:2379/version
 
 ### Put
 
-```shell
+```bash
 [root@localhost tmp]# ETCDCTL_API=3 etcd-download-test/etcdctl put test1 value1
 OK
 ```
 
 ### GET
 
-```shell
+```bash
  # 新增，put方法如果key之前存在，则默认会先删除，再新建一个key
 [root@localhost tmp]# ETCDCTL_API=3 etcd-download-test/etcdctl put a 测试
  
 [root@localhost tmp]# ETCDCTL_API=3 etcd-download-test/etcdctl get a
 ```
 
-```shell
+```bash
 # JSON输出
 [root@localhost tmp]# ETCDCTL_API=3 etcd-download-test/etcdctl --write-out="json" get a
 
 {"header":{"cluster_id":14841639068965178418,"member_id":10276657743932975437,"revision":5,"raft_term":2},"kvs":[{"key":"YQ==","create_revision":3,"mod_revision":5,"version":2,"value":"5rWL6K+VMg=="}],"count":1}
 ```
 
-```shell
+```bash
 # get --prefix
 [root@localhost tmp]# ETCDCTL_API=3 etcd-download-test/etcdctl put web1 value1
 OK
@@ -84,7 +84,7 @@ value3
 
 ### DEL
 
-```shell
+```bash
 [root@localhost tmp]# ETCDCTL_API=3 etcd-download-test/etcdctl del web1
 1
 [root@localhost tmp]# ETCDCTL_API=3 etcd-download-test/etcdctl get web1
@@ -93,7 +93,7 @@ value3
 
 ### Watch
 
-```shell
+```bash
 [root@localhost tmp]# ETCDCTL_API=3 etcd-download-test/etcdctl put web1 newweb1
 OK
 [root@localhost tmp]# ETCDCTL_API=3 etcd-download-test/etcdctl put web1 newweb2
@@ -105,7 +105,7 @@ OK
 
 ```
 
-```shell
+```bash
 [root@localhost ~]#  ETCDCTL_API=3 /tmp/etcd-download-test/etcdctl watch web1
 PUT
 web1

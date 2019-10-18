@@ -59,7 +59,7 @@ npm 使用 [Gravatar](https://cn.gravatar.com/) 头像，这里可以将 npm 头
 `npm config list` 查看 npm 配置信息。如果发现 `registry` 不是官方源 `http://registry.npmjs.org`，请将仓库镜像源设置成**官方镜像**: `npm config set registry=http://registry.npmjs.org`。
 否则发布时会出现 `npm ERR! publish Failed PUT 403`。
 
-```shell
+```bash
 wangfuchengdeMac-mini:webpack-numbers wangfucheng$ npm publish
 npm notice 
 npm notice 📦  webpack-numbers-demo@1.0.0
@@ -90,7 +90,7 @@ npm ERR! [no_perms] Private mode enable, only admin can publish this module [no_
  
 本地试用 `npm adduser` 登录 npm
 
-```shell
+```bash
 wangfuchengdeMac-mini:webpack-numbers wangfucheng$ npm adduser
 Username: anonymity94
 Password: 
@@ -100,7 +100,7 @@ Logged in as anonymity94 on http://registry.npmjs.org/.
 
 可以使用 `npm config list` 查看 npm 登录信息
 
-```shell
+```bash
 wangfuchengdeMac-mini:webpack-numbers wangfucheng$ npm config list
 ; cli configs
 metrics-registry = "http://registry.npmjs.org/"
@@ -129,7 +129,7 @@ registry = "http://registry.npmjs.org/"
 
 发布包的名字要保证是**独一无二**的。当重名时会有如下错误：
 
-```shell{24}
+```bash{24}
 wangfuchengdeMac-mini:webpack-numbers wangfucheng$ npm publish
 npm notice 
 npm notice 📦  webpack-numbers-demo@1.0.0
@@ -163,7 +163,7 @@ npm ERR!     /Users/wangfucheng/.npm/_logs/2019-09-04T08_34_20_996Z-debug.log
 
 使用 `npm publish` 命令进行发布。
 
-```shell
+```bash
 wangfuchengdeMac-mini:webpack-numbers wangfucheng$ npm publish
 npm notice 
 npm notice 📦  webpack-numbers-publish-demo@1.0.0
@@ -203,7 +203,7 @@ npm notice
 
 删除命令：`npm unpublish --force`。
 
-```shell
+```bash
 wangfuchengdeMac-mini:webpack-numbers wangfucheng$ npm unpublish --force
 npm WARN using --force I sure hope you know what you are doing.
 - webpack-numbers-publish-demo@1.0.0
@@ -216,7 +216,7 @@ npm WARN using --force I sure hope you know what you are doing.
 
 - 镜像不是官方镜像
 
-```shell
+```bash
 npm ERR! publish Failed PUT 403
 npm ERR! code E403
 npm ERR! [no_perms] Private mode enable, only admin can publish this module [no_perms] Private mode enable, only admin can publish 
@@ -224,13 +224,13 @@ npm ERR! [no_perms] Private mode enable, only admin can publish this module [no_
 
 - 邮箱未验证
 
-```shell
+```bash
 npm ERR! You must verify your email before publishing a new package: https://www.npmjs.com/email-edit : cuitaonpm
 ```
 
 - 账户未登录
 
-```shell
+```bash
 npm ERR! code ENEEDAUTH
 npm ERR! need auth auth required for publishing
 npm ERR! need auth You need to authorize this machine using `npm adduser`
@@ -238,7 +238,7 @@ npm ERR! need auth You need to authorize this machine using `npm adduser`
 
 - 包名已经被使用
 
-```shell
+```bash
 npm ERR! publish Failed PUT 403
 npm ERR! code E403
 npm ERR! You do not have permission to publish "webpack-numbers-demo". Are you logged in as the correct user? : webpack-numbers-demo
