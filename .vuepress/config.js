@@ -35,7 +35,7 @@ module.exports = {
     docsBranch: 'v2',
     lastUpdated: '上次更新',
     editLinks: true,
-    editLinkText: '在 GitHub 上编辑此页',
+    editLinkText: '发现错误？在 GitHub 上编辑此页',
     serviceWorker: {
       updatePopup: {
         message: 'New content is available.',
