@@ -49,6 +49,7 @@ module.exports = {
           { text: '文章', link: '/articles/' },
           { text: '收藏夹', link: '/collections/' },
           { text: '归档', link: '/archive/' },
+          { text: '试验场', link: '/experimentation/' },
           { text: '关于', link: '/about/' }
         ]
       }
