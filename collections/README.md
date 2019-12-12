@@ -49,6 +49,10 @@ sidebar: auto
 - [UmiJS](https://umijs.org/zh/)
 - [DvaJS](https://dvajs.com/)
 
+---
+
+- [The Road to learn React](https://github.com/the-road-to-learn-react)
+
 ### Vue
 
 - [官网](https://cn.vuejs.org/)
@@ -85,22 +89,24 @@ sidebar: auto
 - [ZUI - 禅道公司](http://zui.sexy/#/)
 - [Semantic UI](https://semantic-ui.com/)
 - [Fusion](https://fusion.design/)
-
-### Vue
-
-- [力荐 35 个最好用的 Vue 开源库！](https://mp.weixin.qq.com/s/tWckxkRRo1FgSetZfNUZKQ)
 - [iView](https://www.iviewui.com/)
-
-### React
-
 - [Ant Design](https://ant.design/index-cn)
 - [首页模板库](https://landing.ant.design/index-cn)
+- [Blueprint - A React-based UI toolkit for the web](https://github.com/palantir/blueprint)
+
+--- 
+
+- [力荐 35 个最好用的 Vue 开源库！](https://mp.weixin.qq.com/s/tWckxkRRo1FgSetZfNUZKQ)
 
 ## 编码规范
 
+- [Google Style Guides](http://google.github.io/styleguide/)
 - [Airbnb JavaScript 编码规范](https://github.com/yuche/javascript)
-- [JavaScript 代码简洁之道](https://mp.weixin.qq.com/s/hcJ4sWoS6T8kPmpBxEpPkA)
 - [ESLint](http://eslint.cn/docs/rules/)
+
+--- 
+
+- [JavaScript 代码简洁之道](https://mp.weixin.qq.com/s/hcJ4sWoS6T8kPmpBxEpPkA)
 - [[Vue 进阶]为什么我的代码让别人看起来头皮发麻？](https://mp.weixin.qq.com/s/H8v_DBHtEiVc3BC2f_jAlw)
 
 ## 跨平台桌面构建
@@ -111,6 +117,9 @@ sidebar: auto
 ### Electron
 
 - [中文网](http://electronjs.org/)
+
+---
+
 - [Electron 4.0 稳定版发布，集成 Node 10 和 Chromium 69](https://mp.weixin.qq.com/s/N8tQTffyLKqVYm8NwW8P1g)
 
 #### NW.js
@@ -132,6 +141,9 @@ sidebar: auto
 - [Zdog](https://zzz.dog/)
 - [Kibana](https://www.elastic.co/cn/products/kibana)
 - [ThingJS - 物联网 3D 可视化平台](http://www.thingjs.com/guide/)
+
+---
+
 - [最好的 JavaScript 数据可视化库都在这里了](https://mp.weixin.qq.com/s/jdPgWwSEVTX06zJvXlsmOg)
 - [[译] 2018 年最佳 JavaScript 数据可视化和图表库](https://mp.weixin.qq.com/s/NgaQ4sGI4RDXb23ua2Spbw)
 
@@ -153,14 +165,6 @@ sidebar: auto
 
 - [大前端时代你的 vscode 插件](https://mp.weixin.qq.com/s/AFqHIqss-I8Zd7uA-1oGBg)
 
-## 精彩文章乱炖
-
-- [JavaScript 理论 - 前端之巅](https://mp.weixin.qq.com/mp/homepage?__biz=MzUxMzcxMzE5Ng==&hid=9&sn=e0e04bbd02f51dd435c1b0d8ac0df5ff&scene=18)
-- [前端一年精选好文，请打包带走(2018) - 前端之巅](https://mp.weixin.qq.com/s/g9SkWdNwn67w6ehn6hD7TQ)
-- [我看完掘金上的 227 篇文章，总结出一份 Flutter 入门教程](https://juejin.im/post/5b3c8a4be51d4519935860d5)
-- [flutter 从入门到能寄几玩儿](https://mp.weixin.qq.com/s/Brae9qFZiF_YW2xcy3xppw)
-- [理解 JavaScript 中的高阶函数](https://mp.weixin.qq.com/s/aEu_VUX3LtOkfT3mZj-c_A)
-
 ## GitHub
 
 - [Wechat API(ES6 版)](https://github.com/node-webot/co-wechat-api)
@@ -179,7 +183,29 @@ sidebar: auto
 ## GraphQL
 
 - [中文网](https://graphql.cn/)
+- [The Road to GraphQL](https://github.com/the-road-to-graphql)
 
 ## Nginx
 
 ## Docker
+
+- [Docker 教程 | 菜鸟教程](https://www.runoob.com/docker/docker-tutorial.html)
+- [一文零基础教你学会 Docker 入门到实践](https://mp.weixin.qq.com/s/S7ksqF8z4SYJvcG1DOupNA)
+
+## 精彩文章乱炖
+
+- [JavaScript 理论 - 前端之巅](https://mp.weixin.qq.com/mp/homepage?__biz=MzUxMzcxMzE5Ng==&hid=9&sn=e0e04bbd02f51dd435c1b0d8ac0df5ff&scene=18)
+- [前端一年精选好文，请打包带走(2018) - 前端之巅](https://mp.weixin.qq.com/s/g9SkWdNwn67w6ehn6hD7TQ)
+- [我看完掘金上的 227 篇文章，总结出一份 Flutter 入门教程](https://juejin.im/post/5b3c8a4be51d4519935860d5)
+- [flutter 从入门到能寄几玩儿](https://mp.weixin.qq.com/s/Brae9qFZiF_YW2xcy3xppw)
+- [理解 JavaScript 中的高阶函数](https://mp.weixin.qq.com/s/aEu_VUX3LtOkfT3mZj-c_A)
+
+## Awesomes
+
+- [Inquirer.js - 处理 Node.js 终端命令行交互](https://github.com/SBoudrias/Inquirer.js)
+- [Chalk.js - Node.js 终端样式库](https://github.com/chalk/chalk)
+- [ora - 优雅的 Node.js 终端加载动画效果](https://github.com/sindresorhus/ora)
+- [bit - Easily share and sync components between projects](https://bit.dev/)
+- [Cropper.js - 图片裁剪器](https://github.com/fengyuanchen/cropperjs)
+- [React-Grid-Layout - 网格布局系统](https://github.com/STRML/react-grid-layout)
+- [vue-grid-layout - 网格布局系统](https://github.com/jbaysolutions/vue-grid-layout)
