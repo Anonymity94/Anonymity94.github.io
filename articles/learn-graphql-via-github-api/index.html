@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>利用 GitHub API 学习 GraphQL | Anonymity94</title>
+    <meta name="description" content="Just do IT.">
+    <link rel="icon" href="/avatar.png">
+  <meta author="anonymity94">
+    
+    <link rel="preload" href="/assets/css/0.styles.3ef5a988.css" as="style"><link rel="preload" href="/assets/js/app.522b8a63.js" as="script"><link rel="preload" href="/assets/js/2.f797d85c.js" as="script"><link rel="preload" href="/assets/js/7.00bef360.js" as="script"><link rel="preload" href="/assets/js/12.b78af2e4.js" as="script"><link rel="prefetch" href="/assets/js/10.2aa202b8.js"><link rel="prefetch" href="/assets/js/11.79e71ef3.js"><link rel="prefetch" href="/assets/js/13.511050a2.js"><link rel="prefetch" href="/assets/js/14.16f6e91e.js"><link rel="prefetch" href="/assets/js/15.a964c109.js"><link rel="prefetch" href="/assets/js/16.d2f07e1c.js"><link rel="prefetch" href="/assets/js/17.96355481.js"><link rel="prefetch" href="/assets/js/18.a4a71f87.js"><link rel="prefetch" href="/assets/js/19.3753c5a7.js"><link rel="prefetch" href="/assets/js/20.1cd8196c.js"><link rel="prefetch" href="/assets/js/21.162941be.js"><link rel="prefetch" href="/assets/js/22.ba02b4dd.js"><link rel="prefetch" href="/assets/js/23.84a20ed1.js"><link rel="prefetch" href="/assets/js/24.5b416d24.js"><link rel="prefetch" href="/assets/js/25.d864b4a0.js"><link rel="prefetch" href="/assets/js/26.4d2cbd87.js"><link rel="prefetch" href="/assets/js/27.bcb4b3f2.js"><link rel="prefetch" href="/assets/js/28.185a4474.js"><link rel="prefetch" href="/assets/js/29.14e6af82.js"><link rel="prefetch" href="/assets/js/3.5315ac28.js"><link rel="prefetch" href="/assets/js/30.881e0fc3.js"><link rel="prefetch" href="/assets/js/31.5de6b1a8.js"><link rel="prefetch" href="/assets/js/32.42c8b0d9.js"><link rel="prefetch" href="/assets/js/33.9848fded.js"><link rel="prefetch" href="/assets/js/34.48d37d89.js"><link rel="prefetch" href="/assets/js/35.1d88a1b4.js"><link rel="prefetch" href="/assets/js/36.8e6e4946.js"><link rel="prefetch" href="/assets/js/4.16d8170f.js"><link rel="prefetch" href="/assets/js/5.9e19003b.js"><link rel="prefetch" href="/assets/js/6.93991136.js"><link rel="prefetch" href="/assets/js/8.46aed388.js"><link rel="prefetch" href="/assets/js/9.1137f7ef.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3ef5a988.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Anonymity94</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/articles/" class="nav-link router-link-active">文章</a></div><div class="nav-item"><a href="/collections/" class="nav-link">收藏夹</a></div><div class="nav-item"><a href="/archive/" class="nav-link">归档</a></div><div class="nav-item"><a href="/experimentation/" class="nav-link">试验场</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div> <a href="https://github.com/Anonymity94" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/articles/" class="nav-link router-link-active">文章</a></div><div class="nav-item"><a href="/collections/" class="nav-link">收藏夹</a></div><div class="nav-item"><a href="/archive/" class="nav-link">归档</a></div><div class="nav-item"><a href="/experimentation/" class="nav-link">试验场</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div> <a href="https://github.com/Anonymity94" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>利用 GitHub API 学习 GraphQL</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/articles/learn-graphql-via-github-api/#graphql是什么？" class="sidebar-link">GraphQL是什么？</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/articles/learn-graphql-via-github-api/#获取-token" class="sidebar-link">获取 Token</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/articles/learn-graphql-via-github-api/#使用-curl" class="sidebar-link">使用 cURL</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/articles/learn-graphql-via-github-api/#使用-github-graphql-explorer" class="sidebar-link">使用 GitHub GraphQL Explorer</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/articles/learn-graphql-via-github-api/#查询和变更" class="sidebar-link">查询和变更</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/articles/learn-graphql-via-github-api/#字段（fields）" class="sidebar-link">字段（Fields）</a></li><li class="sidebar-sub-header"><a href="/articles/learn-graphql-via-github-api/#参数（arguments）" class="sidebar-link">参数（Arguments）</a></li><li class="sidebar-sub-header"><a href="/articles/learn-graphql-via-github-api/#别名（aliases）" class="sidebar-link">别名（Aliases）</a></li><li class="sidebar-sub-header"><a href="/articles/learn-graphql-via-github-api/#片段（fragments）" class="sidebar-link">片段（Fragments）</a></li><li class="sidebar-sub-header"><a href="/articles/learn-graphql-via-github-api/#操作名称（operation-name）" class="sidebar-link">操作名称（Operation Name）</a></li><li class="sidebar-sub-header"><a href="/articles/learn-graphql-via-github-api/#变量（variables）" class="sidebar-link">变量（Variables）</a></li><li class="sidebar-sub-header"><a href="/articles/learn-graphql-via-github-api/#指令（directives）" class="sidebar-link">指令（Directives）</a></li><li class="sidebar-sub-header"><a href="/articles/learn-graphql-via-github-api/#变更（mutations）" class="sidebar-link">变更（Mutations）</a></li><li class="sidebar-sub-header"><a href="/articles/learn-graphql-via-github-api/#内联片段（inline-fragments）" class="sidebar-link">内联片段（Inline Fragments）</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default" data-v-25587483 data-v-25587483><h1 id="利用-github-api-学习-graphql" data-v-25587483><a href="#利用-github-api-学习-graphql" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 利用 GitHub API 学习 GraphQL</h1> <div class="post-meta" data-v-7b3ac6b7 data-v-25587483><span class="post-time" data-v-7b3ac6b7><span class="post-meta-item-text" data-v-7b3ac6b7>
+      发布于:
+    </span> <time itemprop="dateCreated" datetime="2019-08-30T14:13:53.000Z" data-v-7b3ac6b7>
+      2019-08-30
+    </time></span> <div class="post-category" data-v-7b3ac6b7><span itemprop="tag" data-v-7b3ac6b7><a href="/archive/?tag=GraphQL" data-v-7b3ac6b7><span class="tag sm" data-v-7b3ac6b7>
+          GraphQL
+        </span></a></span></div></div> <div class="hero" data-v-25587483><div class="logo" data-v-25587483><img src="https://graphql.cn/img/logo.svg" data-v-25587483> <p data-v-25587483>GraphQL</p></div></div> <p data-v-25587483>GitHub 在 API v4 中选择了 GraphQL，我们可以利用 GitHub 现有的 API 功能来学习 GraphQL 。</p> <h2 id="graphql是什么？" data-v-25587483><a href="#graphql是什么？" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> <a href="https://graphql.cn/" target="_blank" rel="noopener noreferrer" data-v-25587483>GraphQL<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" data-v-25587483 data-v-25587483><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>是什么？</h2> <blockquote data-v-25587483><p data-v-25587483>一种用于 API 的查询语言。</p> <p data-v-25587483>GraphQL 既是一种用于 API 的查询语言也是一个满足你数据查询的运行时。 GraphQL 对你的 API 中的数据提供了一套易于理解的完整描述，使得客户端能够准确地获得它需要的数据，而且没有任何冗余，也让 API 更容易地随着时间推移而演进，还能用于构建强大的开发者工具。</p></blockquote> <h2 id="获取-token" data-v-25587483><a href="#获取-token" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 获取 Token</h2> <p data-v-25587483><img src="/assets/img/get-token-step-1.9c9dfa6a.png" alt="get-token-step-1" style="height:450px;" data-v-25587483></p> <p data-v-25587483><img src="/assets/img/get-token-step-2.e9706a1a.png" alt="get-token-step-2" data-v-25587483> <img src="/assets/img/generate-new-token.15fe158f.png" alt="generate-new-token" data-v-25587483> <img src="/assets/img/new-personal-access-token.4f6a6931.png" alt="new-personal-access-token" data-v-25587483></p> <h2 id="使用-curl" data-v-25587483><a href="#使用-curl" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 使用 cURL</h2> <div class="language-sh extra-class" data-v-25587483><pre class="language-sh" data-v-25587483><code data-v-25587483><span class="token function" data-v-25587483>curl</span> -H <span class="token string" data-v-25587483>&quot;Authorization: bearer 你的token&quot;</span> -X POST -d <span class="token string" data-v-25587483>&quot; \
+ { \
+   <span class="token entity" title="\&quot;" data-v-25587483>\&quot;</span>query<span class="token entity" title="\&quot;" data-v-25587483>\&quot;</span>: <span class="token entity" title="\&quot;" data-v-25587483>\&quot;</span>query { viewer { login }}<span class="token entity" title="\&quot;" data-v-25587483>\&quot;</span> \
+ } \
+&quot;</span> https://api.github.com/graphql
+</code></pre></div><p data-v-25587483>返回结果：</p> <div class="language-sh extra-class" data-v-25587483><pre class="language-sh" data-v-25587483><code data-v-25587483><span class="token punctuation" data-v-25587483>{</span><span class="token string" data-v-25587483>&quot;data&quot;</span>:<span class="token punctuation" data-v-25587483>{</span><span class="token string" data-v-25587483>&quot;viewer&quot;</span>:<span class="token punctuation" data-v-25587483>{</span><span class="token string" data-v-25587483>&quot;login&quot;</span><span class="token builtin class-name" data-v-25587483>:</span><span class="token string" data-v-25587483>&quot;Anonymity94&quot;</span><span class="token punctuation" data-v-25587483>}</span><span class="token punctuation" data-v-25587483>}</span><span class="token punctuation" data-v-25587483>}</span>
+</code></pre></div><h2 id="使用-github-graphql-explorer" data-v-25587483><a href="#使用-github-graphql-explorer" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 使用 GitHub GraphQL Explorer</h2> <blockquote data-v-25587483><p data-v-25587483><a href="https://developer.github.com/v4/explorer/" target="_blank" rel="noopener noreferrer" data-v-25587483>GraphQL Explorer<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" data-v-25587483 data-v-25587483><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <p data-v-25587483>使用 GitHub 授权登录即可使用 GitHub 提供的 GraphQL Explorer 功能。</p> <h2 id="查询和变更" data-v-25587483><a href="#查询和变更" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 查询和变更</h2> <blockquote data-v-25587483><p data-v-25587483>官网介绍：<a href="https://graphql.cn/learn/queries/" target="_blank" rel="noopener noreferrer" data-v-25587483>https://graphql.cn/learn/queries/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" data-v-25587483 data-v-25587483><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <h3 id="字段（fields）" data-v-25587483><a href="#字段（fields）" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 字段（Fields）</h3> <div class="language- extra-class" data-v-25587483><pre class="language-text" data-v-25587483><code data-v-25587483>{
+    viewer {
+        login
+        avatarUrl
+        repositories {
+            totalCount
+        }
+    }
+}
+</code></pre></div><div class="language-json extra-class" data-v-25587483><pre class="language-json" data-v-25587483><code data-v-25587483><span class="token punctuation" data-v-25587483>{</span>
+  <span class="token property" data-v-25587483>&quot;data&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+    <span class="token property" data-v-25587483>&quot;viewer&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+      <span class="token property" data-v-25587483>&quot;login&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;Anonymity94&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;avatarUrl&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;https://avatars0.githubusercontent.com/u/13148447?v=4&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;repositories&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+        <span class="token property" data-v-25587483>&quot;totalCount&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token number" data-v-25587483>64</span>
+      <span class="token punctuation" data-v-25587483>}</span>
+    <span class="token punctuation" data-v-25587483>}</span>
+  <span class="token punctuation" data-v-25587483>}</span>
+<span class="token punctuation" data-v-25587483>}</span>
+</code></pre></div><p data-v-25587483>查询和结果拥有几乎一样的结构。</p> <p data-v-25587483>GraphQL 查询能够遍历相关对象及其字段，使得客户端可以一次请求查询大量相关数据，而不像传统 REST 架构中那样需要多次往返查询。</p> <h3 id="参数（arguments）" data-v-25587483><a href="#参数（arguments）" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 参数（Arguments）</h3> <p data-v-25587483>在类似 REST 的系统中，你只能传递一组简单参数 —— 请求中的 query 参数和 URL 段。但是在 GraphQL 中，每一个字段和嵌套对象都能有自己的一组参数，从而使得 GraphQL 可以完美替代多次 API 获取请求。甚至你也可以给 标量（scalar）字段传递参数，用于实现服务端的一次转换，而不用每个客户端分别转换。</p> <div class="language- extra-class" data-v-25587483><pre class="language-text" data-v-25587483><code data-v-25587483>{
+  viewer {
+    repository(name: &quot;anonymity94.github.io&quot;){
+      id
+      name
+      description
+    }
+  }
+}
+</code></pre></div><div class="language-json extra-class" data-v-25587483><pre class="language-json" data-v-25587483><code data-v-25587483><span class="token punctuation" data-v-25587483>{</span>
+  <span class="token property" data-v-25587483>&quot;data&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+    <span class="token property" data-v-25587483>&quot;viewer&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+      <span class="token property" data-v-25587483>&quot;repository&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+        <span class="token property" data-v-25587483>&quot;id&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;MDEwOlJlcG9zaXRvcnk0OTM1NTg3OA==&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+        <span class="token property" data-v-25587483>&quot;name&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;Anonymity94.github.io&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+        <span class="token property" data-v-25587483>&quot;description&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;访问地址&quot;</span>
+      <span class="token punctuation" data-v-25587483>}</span>
+    <span class="token punctuation" data-v-25587483>}</span>
+  <span class="token punctuation" data-v-25587483>}</span>
+<span class="token punctuation" data-v-25587483>}</span>
+</code></pre></div><h3 id="别名（aliases）" data-v-25587483><a href="#别名（aliases）" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 别名（Aliases）</h3> <p data-v-25587483>发请求给 GraphQL 服务器时，可以给字段起别名，返回的数据中的对应字段就用这个别名作为属性名。</p> <div class="language- extra-class" data-v-25587483><div class="highlight-lines" data-v-25587483><br data-v-25587483><br data-v-25587483><div class="highlighted" data-v-25587483> </div><br data-v-25587483><div class="highlighted" data-v-25587483> </div><br data-v-25587483><br data-v-25587483><br data-v-25587483><br data-v-25587483><br data-v-25587483><br data-v-25587483></div><pre class="language-text" data-v-25587483><code data-v-25587483>{
+  viewer {
+    userName: login 
+    repository(name: &quot;anonymity94.github.io&quot;){
+      repositoryId: id
+      name
+      description
+    }
+  }
+}
+</code></pre></div><div class="language-json extra-class" data-v-25587483><div class="highlight-lines" data-v-25587483><br data-v-25587483><br data-v-25587483><br data-v-25587483><div class="highlighted" data-v-25587483> </div><br data-v-25587483><div class="highlighted" data-v-25587483> </div><br data-v-25587483><br data-v-25587483><br data-v-25587483><br data-v-25587483><br data-v-25587483><br data-v-25587483><br data-v-25587483></div><pre class="language-json" data-v-25587483><code data-v-25587483><span class="token punctuation" data-v-25587483>{</span>
+  <span class="token property" data-v-25587483>&quot;data&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+    <span class="token property" data-v-25587483>&quot;viewer&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+      <span class="token property" data-v-25587483>&quot;userName&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;Anonymity94&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;repository&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+        <span class="token property" data-v-25587483>&quot;repositoryId&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;MDEwOlJlcG9zaXRvcnk0OTM1NTg3OA==&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+        <span class="token property" data-v-25587483>&quot;name&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;Anonymity94.github.io&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+        <span class="token property" data-v-25587483>&quot;description&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;访问地址&quot;</span>
+      <span class="token punctuation" data-v-25587483>}</span>
+    <span class="token punctuation" data-v-25587483>}</span>
+  <span class="token punctuation" data-v-25587483>}</span>
+<span class="token punctuation" data-v-25587483>}</span>
+</code></pre></div><h3 id="片段（fragments）" data-v-25587483><a href="#片段（fragments）" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 片段（Fragments）</h3> <p data-v-25587483>片段: 可复用单元。片段使你能够组织一组字段，然后在需要它们的的地方引入。
+片段的 on 后面的字段是接口（Interface）或类（Object）</p> <div class="language- extra-class" data-v-25587483><pre class="language-text" data-v-25587483><code data-v-25587483>{
+  viewer {
+    ...userInfo
+  }
+  user(login: &quot;Anonymity94&quot;) {
+    ...userInfo
+  }
+}
+
+fragment userInfo on User{
+  id
+  name
+  updatedAt
+}
+</code></pre></div><div class="language-json extra-class" data-v-25587483><pre class="language-json" data-v-25587483><code data-v-25587483><span class="token punctuation" data-v-25587483>{</span>
+  <span class="token property" data-v-25587483>&quot;data&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+    <span class="token property" data-v-25587483>&quot;viewer&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+      <span class="token property" data-v-25587483>&quot;id&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;MDQ6VXNlcjEzMTQ4NDQ3&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;name&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token null keyword" data-v-25587483>null</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;updatedAt&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;2019-08-28T12:09:49Z&quot;</span>
+    <span class="token punctuation" data-v-25587483>}</span><span class="token punctuation" data-v-25587483>,</span>
+    <span class="token property" data-v-25587483>&quot;user&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+      <span class="token property" data-v-25587483>&quot;id&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;MDQ6VXNlcjEzMTQ4NDQ3&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;name&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token null keyword" data-v-25587483>null</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;updatedAt&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;2019-08-28T12:09:49Z&quot;</span>
+    <span class="token punctuation" data-v-25587483>}</span>
+  <span class="token punctuation" data-v-25587483>}</span>
+<span class="token punctuation" data-v-25587483>}</span>
+</code></pre></div><h3 id="操作名称（operation-name）" data-v-25587483><a href="#操作名称（operation-name）" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 操作名称（Operation Name）</h3> <p data-v-25587483><strong data-v-25587483>操作类型</strong> 可以是 <code data-v-25587483>query</code>、<code data-v-25587483>mutation</code> 或 <code data-v-25587483>subscription</code>。只有 <code data-v-25587483>query</code> 可以省略。</p> <p data-v-25587483><strong data-v-25587483>操作名称</strong> 是你的操作的有意义和明确的名称。它仅在有多个操作的文档中是必需的，但我们鼓励使用它，因为它对于调试和服务器端日志记录非常有用。GraphQL 的查询和变更名称，以及片段名称，都可以成为服务端侧用来识别不同 GraphQL 请求的有效调试工具。</p> <h3 id="变量（variables）" data-v-25587483><a href="#变量（variables）" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 变量（Variables）</h3> <div class="language- extra-class" data-v-25587483><pre class="language-text" data-v-25587483><code data-v-25587483>query customQuery($login: String!) {
+  user(login: $login) {
+    id
+    name
+    updatedAt
+  }
+}
+</code></pre></div><p data-v-25587483>Query Variables:</p> <div class="language-json extra-class" data-v-25587483><pre class="language-json" data-v-25587483><code data-v-25587483><span class="token punctuation" data-v-25587483>{</span> <span class="token property" data-v-25587483>&quot;login&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;Anonymity94&quot;</span> <span class="token punctuation" data-v-25587483>}</span>
+</code></pre></div><p data-v-25587483>Result:</p> <div class="language-json extra-class" data-v-25587483><pre class="language-json" data-v-25587483><code data-v-25587483><span class="token punctuation" data-v-25587483>{</span>
+  <span class="token property" data-v-25587483>&quot;data&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+    <span class="token property" data-v-25587483>&quot;user&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+      <span class="token property" data-v-25587483>&quot;id&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;MDQ6VXNlcjEzMTQ4NDQ3&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;name&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token null keyword" data-v-25587483>null</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;updatedAt&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;2019-08-28T12:09:49Z&quot;</span>
+    <span class="token punctuation" data-v-25587483>}</span>
+  <span class="token punctuation" data-v-25587483>}</span>
+<span class="token punctuation" data-v-25587483>}</span>
+</code></pre></div><p data-v-25587483>对于<strong data-v-25587483>简单参数</strong>或<strong data-v-25587483>固定参数</strong>，可以写在查询字符串内。</p> <p data-v-25587483>对于<strong data-v-25587483>动态或者复杂的参数</strong>，我们可以作为分离的字典传进去。变量前缀必须为 <code data-v-25587483>$</code>，后跟其类型。</p> <p data-v-25587483>所有声明的变量都必须是标量、枚举型或者输入对象类型，由 <code data-v-25587483>Schema</code> 确定。</p> <p data-v-25587483>变量定义可以是<strong data-v-25587483>可选的</strong>或者<strong data-v-25587483>必要的</strong>。上例中，<code data-v-25587483>String</code> 后有有 <code data-v-25587483>!</code>，因此其是必要的。但是如果你传递变量的字段可以为空参数，那变量就是可选的。</p> <h3 id="指令（directives）" data-v-25587483><a href="#指令（directives）" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 指令（Directives）</h3> <div class="language-json extra-class" data-v-25587483><pre class="language-json" data-v-25587483><code data-v-25587483>query customQuery($login<span class="token operator" data-v-25587483>:</span> String!<span class="token punctuation" data-v-25587483>,</span> $withFollowing<span class="token operator" data-v-25587483>:</span> Boolean!) <span class="token punctuation" data-v-25587483>{</span>
+  user(login<span class="token operator" data-v-25587483>:</span> $login) <span class="token punctuation" data-v-25587483>{</span>
+    id
+    name
+    updatedAt
+    following(first<span class="token operator" data-v-25587483>:</span> <span class="token number" data-v-25587483>10</span>) @include(if<span class="token operator" data-v-25587483>:</span> $withFollowing) <span class="token punctuation" data-v-25587483>{</span>
+      edges <span class="token punctuation" data-v-25587483>{</span>
+        node <span class="token punctuation" data-v-25587483>{</span>
+          id
+          name
+        <span class="token punctuation" data-v-25587483>}</span>
+      <span class="token punctuation" data-v-25587483>}</span>
+    <span class="token punctuation" data-v-25587483>}</span>
+  <span class="token punctuation" data-v-25587483>}</span>
+<span class="token punctuation" data-v-25587483>}</span>
+</code></pre></div><p data-v-25587483>Query Variables:</p> <div class="language-json extra-class" data-v-25587483><pre class="language-json" data-v-25587483><code data-v-25587483><span class="token punctuation" data-v-25587483>{</span> 
+  <span class="token property" data-v-25587483>&quot;login&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;Anonymity94&quot;</span><span class="token punctuation" data-v-25587483>,</span> 
+  <span class="token property" data-v-25587483>&quot;withFollowing&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token boolean" data-v-25587483>true</span> 
+<span class="token punctuation" data-v-25587483>}</span>
+</code></pre></div><div class="language-json extra-class" data-v-25587483><pre class="language-json" data-v-25587483><code data-v-25587483><span class="token punctuation" data-v-25587483>{</span>
+  <span class="token property" data-v-25587483>&quot;data&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+    <span class="token property" data-v-25587483>&quot;user&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+      <span class="token property" data-v-25587483>&quot;id&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;MDQ6VXNlcjEzMTQ4NDQ3&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;name&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token null keyword" data-v-25587483>null</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;updatedAt&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;2019-08-28T12:09:49Z&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+      <span class="token property" data-v-25587483>&quot;following&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+        <span class="token property" data-v-25587483>&quot;edges&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>[</span>
+          <span class="token punctuation" data-v-25587483>{</span>
+            <span class="token property" data-v-25587483>&quot;node&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+              <span class="token property" data-v-25587483>&quot;id&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;MDQ6VXNlcjI0Nzk5Njc=&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+              <span class="token property" data-v-25587483>&quot;name&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;Robin Wieruch&quot;</span>
+            <span class="token punctuation" data-v-25587483>}</span>
+          <span class="token punctuation" data-v-25587483>}</span><span class="token punctuation" data-v-25587483>,</span>
+          <span class="token punctuation" data-v-25587483>{</span>
+            <span class="token property" data-v-25587483>&quot;node&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+              <span class="token property" data-v-25587483>&quot;id&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;MDQ6VXNlcjkwNTQzNA==&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+              <span class="token property" data-v-25587483>&quot;name&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;Ruan YiFeng&quot;</span>
+            <span class="token punctuation" data-v-25587483>}</span>
+          <span class="token punctuation" data-v-25587483>}</span><span class="token punctuation" data-v-25587483>,</span>
+          <span class="token punctuation" data-v-25587483>{</span>
+            <span class="token property" data-v-25587483>&quot;node&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token punctuation" data-v-25587483>{</span>
+              <span class="token property" data-v-25587483>&quot;id&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;MDQ6VXNlcjg0MTYyNQ==&quot;</span><span class="token punctuation" data-v-25587483>,</span>
+              <span class="token property" data-v-25587483>&quot;name&quot;</span><span class="token operator" data-v-25587483>:</span> <span class="token string" data-v-25587483>&quot;老雷&quot;</span>
+            <span class="token punctuation" data-v-25587483>}</span>
+          <span class="token punctuation" data-v-25587483>}</span>
+        <span class="token punctuation" data-v-25587483>]</span>
+      <span class="token punctuation" data-v-25587483>}</span>
+    <span class="token punctuation" data-v-25587483>}</span>
+  <span class="token punctuation" data-v-25587483>}</span>
+<span class="token punctuation" data-v-25587483>}</span>
+</code></pre></div><p data-v-25587483>指令可以变量动态地改变我们查询的结构。</p> <p data-v-25587483>一个指令可以附着在字段或者片段包含的字段上，然后以任何服务端期待的方式来改变查询的执行。</p> <p data-v-25587483>GraphQL 支持的指令有两个：</p> <ul data-v-25587483><li data-v-25587483><strong data-v-25587483>@include(if: Boolean)</strong> 仅在参数为 true 时，包含此字段。</li> <li data-v-25587483><strong data-v-25587483>@skip(if: Boolean)</strong> 如果参数为 true，跳过此字段。</li></ul> <p data-v-25587483>尝试修改上面的变量，传递 <code data-v-25587483>false</code> 给 <code data-v-25587483>withFollowing</code>，看看结果的变化吧~</p> <h3 id="变更（mutations）" data-v-25587483><a href="#变更（mutations）" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 变更（Mutations）</h3> <h3 id="内联片段（inline-fragments）" data-v-25587483><a href="#内联片段（inline-fragments）" aria-hidden="true" class="header-anchor" data-v-25587483>#</a> 内联片段（Inline Fragments）</h3></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Anonymity94/Anonymity94.github.io/edit/v2/articles/learn-graphql-via-github-api/README.md" target="_blank" rel="noopener noreferrer">发现错误？在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">2019-9-4 17:56:13</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.522b8a63.js" defer></script><script src="/assets/js/2.f797d85c.js" defer></script><script src="/assets/js/7.00bef360.js" defer></script><script src="/assets/js/12.b78af2e4.js" defer></script>
+  </body>
+</html>
