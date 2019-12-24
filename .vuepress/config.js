@@ -8,6 +8,7 @@ module.exports = {
   base: '/',
   title: 'Anonymity94',
   port: 8080,
+  dest: 'build',
   head: [
     ['link', { rel: 'icon', href: '/avatar.png' }],
     ['meta', { author: 'anonymity94' }]

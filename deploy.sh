@@ -3,7 +3,7 @@
 set -e
 
 npm run build
-cd .vuepress/dist
+cd build
 git init
 # git pull git@github.com:Anonymity94/Anonymity94.github.io.git master
 git add -A
