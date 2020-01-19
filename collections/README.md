@@ -93,6 +93,7 @@ sidebar: auto
 - [Ant Design](https://ant.design/index-cn)
 - [首页模板库](https://landing.ant.design/index-cn)
 - [Blueprint - A React-based UI toolkit for the web](https://github.com/palantir/blueprint)
+- [iuap design](http://bee.tinper.org/design/)
 
 --- 
 
@@ -165,11 +166,6 @@ sidebar: auto
 
 - [大前端时代你的 vscode 插件](https://mp.weixin.qq.com/s/AFqHIqss-I8Zd7uA-1oGBg)
 
-## GitHub
-
-- [Wechat API(ES6 版)](https://github.com/node-webot/co-wechat-api)
-- [《React 实战：设计模式和最佳实践》源码 - 掘金小册](https://github.com/mocheng/react-practice)
-
 ## 源码分析
 
 - [React 源码解析](https://react.jokcy.me/)
@@ -184,6 +180,10 @@ sidebar: auto
 
 - [中文网](https://graphql.cn/)
 - [The Road to GraphQL](https://github.com/the-road-to-graphql)
+
+---
+
+- [阻碍你使用 GraphQL 的十个问题 - 咀嚼之味](https://jerryzou.com/posts/10-questions-about-graphql/)
 
 ## Nginx
 
@@ -200,6 +200,15 @@ sidebar: auto
 - [flutter 从入门到能寄几玩儿](https://mp.weixin.qq.com/s/Brae9qFZiF_YW2xcy3xppw)
 - [理解 JavaScript 中的高阶函数](https://mp.weixin.qq.com/s/aEu_VUX3LtOkfT3mZj-c_A)
 
+## 微前端
+
+- [qiankun](https://github.com/umijs/qiankun)
+- [icestark](https://github.com/ice-lab/icestark)
+
+---
+
+- [微前端的核心价值 - by kuitos](https://zhuanlan.zhihu.com/p/95085796)
+
 ## Awesomes
 
 - [Inquirer.js - 处理 Node.js 终端命令行交互](https://github.com/SBoudrias/Inquirer.js)
@@ -209,3 +218,7 @@ sidebar: auto
 - [Cropper.js - 图片裁剪器](https://github.com/fengyuanchen/cropperjs)
 - [React-Grid-Layout - 网格布局系统](https://github.com/STRML/react-grid-layout)
 - [vue-grid-layout - 网格布局系统](https://github.com/jbaysolutions/vue-grid-layout)
+- [react-tiny-virtual-list - 虚拟列表](https://github.com/clauderic/react-tiny-virtual-list)
+- [react-base-table - 可展示大量数据集的表格组件](https://github.com/Autodesk/react-base-table)
+- [Wechat API(ES6 版)](https://github.com/node-webot/co-wechat-api)
+- [《React 实战：设计模式和最佳实践》源码 - 掘金小册](https://github.com/mocheng/react-practice)
