@@ -96,6 +96,8 @@ sidebar: auto
 - [iuap design](http://bee.tinper.org/design/)
 - [Tailwind](https://tailwindcss.com/)
 
+- [Vant Weapp](https://youzan.github.io/vant-weapp/#/intro)
+
 --- 
 
 - [力荐 35 个最好用的 Vue 开源库！](https://mp.weixin.qq.com/s/tWckxkRRo1FgSetZfNUZKQ)
