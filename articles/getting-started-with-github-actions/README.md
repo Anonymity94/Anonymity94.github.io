@@ -24,6 +24,16 @@ tags:
   "homepage": "http://anonymity94.github.io/"
 ```
 
+## 调整`vuepress`构建后的输出目录
+
+参考：[VuePress配置#dest](https://vuepress.vuejs.org/zh/config/#dest)
+
+```js
+module.exports = {
+  dest: 'build'
+}
+```
+
 ## 创建 `ci.yml`
 
 在仓库的根目录创建文件 `.github/workflows/ci.yml`。*`ci.yml`文件名可以随意取*
@@ -35,6 +45,7 @@ name: GitHub Actions Build GitHub.io Page
 on:
   push:
     branches:
+    # 源码分支v2
       - v2
 jobs:
   build-and-deploy:
@@ -50,7 +61,9 @@ jobs:
       uses: peaceiris/actions-gh-pages@v2
       env:
         PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        # 构建后的文件发布到master分支上
         PUBLISH_BRANCH: master
+        # 这里和vuepress构建输出的目录有关
         PUBLISH_DIR: ./build
         BUILD_SCRIPT: npm install && npm run build
 ```
