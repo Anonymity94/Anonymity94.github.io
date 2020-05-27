@@ -154,6 +154,7 @@ sidebar: auto
 ## 正则表达式
 
 - [一次性搞懂 JavaScript 正则表达式之语法](https://mp.weixin.qq.com/s/kDdikreTxYVFxXMQB6cYlA)
+- [《JS 正则迷你书》](https://github.com/qdlaoyao/js-regex-mini-book)
 - [正则表达式全集](http://tool.oschina.net/uploads/apidocs/jquery/regexp.html)
 - [还不会正则表达式？看这篇！](https://mp.weixin.qq.com/s/f6ii_hKgY0gLdhMFda6S6Q)
 - [https://regex101.com/](https://regex101.com/)
