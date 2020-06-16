@@ -18,6 +18,7 @@ sidebar: auto
 - [面试图谱](https://yuchengkai.cn/docs/)
 - [前端面试每日 3+1](https://github.com/haizlin/fe-interview)
 - [前端面试与进阶指南](https://www.cxymsg.com/)
+- [蚂蚁、字节、滴滴面试经历总结(都已过)](https://mp.weixin.qq.com/s/gIpwgL3TJpId955g2eSBRA)
 
 ### 异步
 
@@ -195,6 +196,8 @@ sidebar: auto
 
 - [Docker 教程 | 菜鸟教程](https://www.runoob.com/docker/docker-tutorial.html)
 - [一文零基础教你学会 Docker 入门到实践](https://mp.weixin.qq.com/s/S7ksqF8z4SYJvcG1DOupNA)
+- [两个奇技淫巧，将 Docker 镜像体积减小 99%](https://mp.weixin.qq.com/s/kyK6652kchtudZHhSsYx_Q)
+- [不要轻易使用 Alpine 镜像来构建 Docker 镜像，有坑！](https://mp.weixin.qq.com/s/1FQWWKvuPj3xxqoyoQ_xVg)
 
 ## 精彩文章乱炖
 
