@@ -191,13 +191,41 @@ integer "integer"
 
 ---
 
+## 常用解析语句
+
+### 空白
+```
+Whitespace
+  = [ \t\n\r]*
+```
+
+### Boolean
+```
+Boolean
+  = 'true' { return true; }
+  / 'false' { return false; }
+```
+
+### 数字
+```
+Integer "Integer"
+  = digits:[0-9]+ { return parseInt(digits.join(""), 10); }
+```
+
+## Splunk Quick Reference Guide
+> [pdf在线预览](https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf)
 
 TODO
+
+## 使用
+
+[Splunk的SPL转ElasticSearch的DSL](https://github.com/Anonymity94/splunk-to-es)
 
 ## 参考
 
 - [解析表达语法](https://en.wikipedia.org/wiki/Parsing_expression_grammar)
 - [PEG.js 文档 [译]](https://zhuanlan.zhihu.com/p/123294460)
 - [PEG.js Demo](https://github.com/pegjs/pegjs/tree/master/examples)
+- [PEG Online](https://pegjs.org/online)
 - [通过 PEG.js 实现一个 JSON Parser](https://www.codercto.com/a/45502.html)
 - [正则表达式的回溯](https://www.cnblogs.com/leeego-123/p/11119416.html)
