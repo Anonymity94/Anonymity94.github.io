@@ -13,14 +13,18 @@ tags:
 ```json
 GET /i_test_index-2020-08-06/_search
 {
-  "query": {
-    "match_all": {}
-  },
-  "size": 0,
-  "track_total_hits": true,
-  "aggs": {
-    "total_packets": { "sum": { "field": "total_packets" } }
-  }
+	"query": {
+		"match_all": {}
+	},
+	"size": 0,
+	"track_total_hits": true,
+	"aggs": {
+		"total_packets": {
+			"sum": {
+				"field": "total_packets"
+			}
+		}
+	}
 }
 ```
 
@@ -31,19 +35,19 @@ GET /i_test_index-2020-08-06/_search
 ```json
 GET /i_test_index-2020-08-06/_search
 {
-  "query": {
-    "match_all": {}
-  },
-  "size": 0,
-  "track_total_hits": true,
-  "aggs": {
-    "total_packets": { 
-      "histogram": {
-        "field": "total_packets",
-        "interval": 50
-      }
-    }
-  }
+	"query": {
+		"match_all": {}
+	},
+	"size": 0,
+	"track_total_hits": true,
+	"aggs": {
+		"total_packets": {
+			"histogram": {
+				"field": "total_packets",
+				"interval": 50
+			}
+		}
+	}
 }
 ```
 
@@ -54,18 +58,18 @@ GET /i_test_index-2020-08-06/_search
 ```json
 GET /i_test_index-2020-08-06/_search
 {
-  "query": {
-    "match_all": {}
-  },
-  "size": 0,
-  "track_total_hits": true,
-  "aggs": {
-    "sales_over_time": {
-      "date_histogram": {
-        "field": "start_time",
-        "calendar_interval": "hour"
-      }
-    }
-  }
+	"query": {
+		"match_all": {}
+	},
+	"size": 0,
+	"track_total_hits": true,
+	"aggs": {
+		"sales_over_time": {
+			"date_histogram": {
+				"field": "start_time",
+				"calendar_interval": "hour"
+			}
+		}
+	}
 }
 ```
