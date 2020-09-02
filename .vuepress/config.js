@@ -58,6 +58,6 @@ module.exports = {
   },
   plugins: [['@vuepress/back-to-top', true], ['@vuepress/medium-zoom', true]],
   markdown: {
-    lineNumbers: false // 是否显示行号
+    lineNumbers: true // 是否显示行号
   }
 }

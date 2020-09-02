@@ -6,6 +6,8 @@ tags:
 
 # Elasticsearch 搜索语句
 
+<ArticleMeta />
+
 ## `sum`
 
 > https://www.elastic.co/guide/en/elasticsearch/reference/7.8/search-aggregations-metrics-sum-aggregation.html#
