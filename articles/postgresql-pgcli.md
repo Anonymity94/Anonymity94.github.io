@@ -43,6 +43,19 @@ select * from <表名>
 table <表名>
 ```
 
+
+## 命令说明
+
+```sh
+\h
+```
+
+## 退出
+
+```sh
+\q
+```
+
 ## 参考
 
 - [pgcli](https://www.pgcli.com/)
