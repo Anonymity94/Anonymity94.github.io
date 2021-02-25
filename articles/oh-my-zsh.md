@@ -51,5 +51,23 @@ source ~/.oh-my-zsh/plugins/incr/incr*.zsh
 
 ![](https://mimosa-pudica.net/img/zsh.gif)
 
----
-Cool!
+
+## 修复问题
+
+解决 `mac` 系统报 `zsh: command not found: npm` 问题
+
+1. 检查 `.bash_profile` 文件
+```bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+```
+
+2. 在 `~/.zshrc` 文件中添加
+```bash
+source ~/.bash_profile
+```
+
+3. 刷新配置文件
+```bash
+source ~/.zshrc
+```
