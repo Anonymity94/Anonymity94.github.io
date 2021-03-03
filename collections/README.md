@@ -96,7 +96,6 @@ sidebar: auto
 - [Blueprint - A React-based UI toolkit for the web](https://github.com/palantir/blueprint)
 - [iuap design](http://bee.tinper.org/design/)
 - [Tailwind](https://tailwindcss.com/)
-
 - [Vant Weapp](https://youzan.github.io/vant-weapp/#/intro)
 
 --- 
@@ -152,6 +151,13 @@ sidebar: auto
 - [最好的 JavaScript 数据可视化库都在这里了](https://mp.weixin.qq.com/s/jdPgWwSEVTX06zJvXlsmOg)
 - [[译] 2018 年最佳 JavaScript 数据可视化和图表库](https://mp.weixin.qq.com/s/NgaQ4sGI4RDXb23ua2Spbw)
 
+## BI框架
+
+- [Grafana](https://github.com/grafana/grafana)
+- [Superset](https://gitee.com/mirrors/Superset)
+- [Redash](https://gitee.com/mirrors/redash)
+- [Davinci](https://gitee.com/mirrors/Davinci)
+
 ## 正则表达式
 
 - [一次性搞懂 JavaScript 正则表达式之语法](https://mp.weixin.qq.com/s/kDdikreTxYVFxXMQB6cYlA)
@@ -166,6 +172,8 @@ sidebar: auto
 - [字符图形](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
 - [json 格式化](http://www.bejson.com/)
 - [前端导航](http://www.fly63.com/nav)
+- [emoji表情](https://emojipedia.org/)
+- [「Devhints」互联网最大的编程备忘录网站](https://devhints.io/)
 
 ## 编辑器
 
@@ -180,6 +188,7 @@ sidebar: auto
 - [官网](http://www.typescriptlang.org/index.html)
 - [TypeScript Handbook（中文版）](https://zhongsp.gitbooks.io/typescript-handbook/content/)
 - [TypeScript 入门教程](https://ts.xcatliu.com/)
+- [TS 常见问题整理（60多个，持续更新ing）](https://juejin.cn/post/6844904055039344654)
 
 ## GraphQL
 
@@ -215,6 +224,13 @@ sidebar: auto
 ---
 
 - [微前端的核心价值 - by kuitos](https://zhuanlan.zhihu.com/p/95085796)
+
+## Deno
+
+- [Deno 钻研之术](https://github.com/hylerrix/deno-tutorial)
+- [Deno + Oak 连接 MySQL 实战教程](https://juejin.cn/post/6847902207585550343)
+- [How to Create a Todo API in Deno and Oak](https://www.freecodecamp.org/news/create-a-todo-api-in-deno-written-by-a-guy-coming-from-node/)
+- [大海深的技术博客](https://chenshenhai.com/deno_note/note/chapter_01/01)
 
 ## Awesomes
 
