@@ -98,7 +98,7 @@ sidebar: auto
 - [Tailwind](https://tailwindcss.com/)
 - [Vant Weapp](https://youzan.github.io/vant-weapp/#/intro)
 
---- 
+---
 
 - [力荐 35 个最好用的 Vue 开源库！](https://mp.weixin.qq.com/s/tWckxkRRo1FgSetZfNUZKQ)
 
@@ -108,7 +108,7 @@ sidebar: auto
 - [Airbnb JavaScript 编码规范](https://github.com/yuche/javascript)
 - [ESLint](http://eslint.cn/docs/rules/)
 
---- 
+---
 
 - [JavaScript 代码简洁之道](https://mp.weixin.qq.com/s/hcJ4sWoS6T8kPmpBxEpPkA)
 - [[Vue 进阶]为什么我的代码让别人看起来头皮发麻？](https://mp.weixin.qq.com/s/H8v_DBHtEiVc3BC2f_jAlw)
@@ -151,7 +151,7 @@ sidebar: auto
 - [最好的 JavaScript 数据可视化库都在这里了](https://mp.weixin.qq.com/s/jdPgWwSEVTX06zJvXlsmOg)
 - [[译] 2018 年最佳 JavaScript 数据可视化和图表库](https://mp.weixin.qq.com/s/NgaQ4sGI4RDXb23ua2Spbw)
 
-## BI框架
+## BI 框架
 
 - [Grafana](https://github.com/grafana/grafana)
 - [Superset](https://gitee.com/mirrors/Superset)
@@ -166,13 +166,15 @@ sidebar: auto
 - [还不会正则表达式？看这篇！](https://mp.weixin.qq.com/s/f6ii_hKgY0gLdhMFda6S6Q)
 - [https://regex101.com/](https://regex101.com/)
 - [https://regexr.com/](https://regexr.com/)
+- [https://regexper.com/](https://regexper.com/)
+- [正则大全](https://any86.github.io/any-rule/)
 
 ## 工具
 
 - [字符图形](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
 - [json 格式化](http://www.bejson.com/)
 - [前端导航](http://www.fly63.com/nav)
-- [emoji表情](https://emojipedia.org/)
+- [emoji 表情](https://emojipedia.org/)
 - [「Devhints」互联网最大的编程备忘录网站](https://devhints.io/)
 
 ## 编辑器
@@ -188,7 +190,7 @@ sidebar: auto
 - [官网](http://www.typescriptlang.org/index.html)
 - [TypeScript Handbook（中文版）](https://zhongsp.gitbooks.io/typescript-handbook/content/)
 - [TypeScript 入门教程](https://ts.xcatliu.com/)
-- [TS 常见问题整理（60多个，持续更新ing）](https://juejin.cn/post/6844904055039344654)
+- [TS 常见问题整理（60 多个，持续更新 ing）](https://juejin.cn/post/6844904055039344654)
 
 ## GraphQL
 
