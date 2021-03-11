@@ -176,6 +176,7 @@ sidebar: auto
 - [前端导航](http://www.fly63.com/nav)
 - [emoji 表情](https://emojipedia.org/)
 - [「Devhints」互联网最大的编程备忘录网站](https://devhints.io/)
+- [为你的项目创建必要的 .gitignore 文件](https://www.gitignore.io/)
 
 ## 编辑器
 
