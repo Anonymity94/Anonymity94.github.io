@@ -124,7 +124,7 @@ sidebar: auto
 
 ---
 
-- [Electron 4.0 稳定版发布，集成 Node 10 和 Chromium 69](https://mp.weixin.qq.com/s/N8tQTffyLKqVYm8NwW8P1g)
+- [Github - Electron Playground](https://github.com/tal-tech/electron-playground)
 
 #### NW.js
 
@@ -166,12 +166,13 @@ sidebar: auto
 - [还不会正则表达式？看这篇！](https://mp.weixin.qq.com/s/f6ii_hKgY0gLdhMFda6S6Q)
 - [https://regex101.com/](https://regex101.com/)
 - [https://regexr.com/](https://regexr.com/)
-- [https://regexper.com/](https://regexper.com/)
+- [正则表达式生成铁路图/](https://regexper.com/)
 - [正则大全](https://any86.github.io/any-rule/)
 
 ## 工具
 
 - [字符图形](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+- [生成 ascii 字符串](http://www.asciiworld.com/index.html)
 - [json 格式化](http://www.bejson.com/)
 - [前端导航](http://www.fly63.com/nav)
 - [emoji 表情](https://emojipedia.org/)
