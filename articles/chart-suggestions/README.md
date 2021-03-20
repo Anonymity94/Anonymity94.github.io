@@ -7,6 +7,6 @@ tags:
 
 # Chart Suggestions—A Thought-Starter
 
-<ArticleMeta />
+
 
 ![Chart Suggestions—A Thought-Starter](./Chart-Suggestion-A-Thought-Starter.png)

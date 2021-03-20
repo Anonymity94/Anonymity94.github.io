@@ -6,7 +6,7 @@ tags:
 
 # 本地运行 Kibana
 
-<ArticleMeta />
+
 
 ## github仓库
 [elastic/kibana](https://github.com/elastic/kibana/)

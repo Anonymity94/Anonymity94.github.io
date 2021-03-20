@@ -6,7 +6,7 @@ tags:
 
 # CSP 策略
 
-<ArticleMeta />
+
 
 CSP（Content Security Policy），"网页安全政策"，限制的是客户端可加载和执行资源的范围。
 

@@ -6,7 +6,7 @@ tags:
 
 # Highcharts vs. ECharts vs. G2Plot
 
-<ArticleMeta />
+
 
 ## License
 

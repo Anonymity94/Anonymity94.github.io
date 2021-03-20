@@ -5,7 +5,7 @@ tags:
 
 # Oh my zsh
 
-<ArticleMeta />
+
 
 ## 安装 `oh-my-zsh`
 

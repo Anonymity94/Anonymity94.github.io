@@ -6,7 +6,7 @@ tags:
 
 # 利用 GitHub API 学习 GraphQL
 
-<ArticleMeta />
+
 
 <style lang="less" scoped>
 .hero {

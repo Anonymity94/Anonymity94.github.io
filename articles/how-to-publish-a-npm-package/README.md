@@ -6,7 +6,7 @@ tags:
 
 # 如何发布 npm 包
 
-<ArticleMeta />
+
 
 这里借助 webpack 官网中的一个 [demo](https://webpack.js.org/guides/author-libraries/) 来演示如何发布一个 npm 包。
 

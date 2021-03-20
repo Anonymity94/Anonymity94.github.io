@@ -6,8 +6,6 @@ tags:
 
 # 使用 DSL 实现自定义过滤查询
 
-<ArticleMeta />
-
 ## 背景
 
 ## DSL 初识

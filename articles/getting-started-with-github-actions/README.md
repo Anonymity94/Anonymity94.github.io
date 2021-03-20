@@ -6,7 +6,7 @@ tags:
 
 # 使用 GitHub Actions 自动发布博客
 
-<ArticleMeta />
+
 
 ## 设置 `GitHub` 仓库的 `Secrets`
 

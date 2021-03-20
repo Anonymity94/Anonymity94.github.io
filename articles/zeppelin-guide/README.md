@@ -7,7 +7,7 @@ tags:
 
 # Zeppelin
 
-<ArticleMeta />
+
 
 ## JDBC 通用解释器
 JDBC解释器允许您无缝地创建到任何数据源的JDBC连接。

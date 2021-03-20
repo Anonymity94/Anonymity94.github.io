@@ -8,7 +8,7 @@ tags:
 
 # 集群常用命令汇总
 
-<ArticleMeta />
+
 
 ## Mongo
 

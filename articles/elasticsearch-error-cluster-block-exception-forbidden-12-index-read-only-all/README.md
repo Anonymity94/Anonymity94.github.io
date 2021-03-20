@@ -6,7 +6,7 @@ tags:
 
 # 磁盘空间不足导致 Elasticsearch 锁定索引无法写入数据
 
-<ArticleMeta />
+
 
 ## 发现问题
 

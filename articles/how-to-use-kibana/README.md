@@ -6,7 +6,7 @@ tags:
 
 # 如何使用 Kibana
 
-<ArticleMeta />
+
 
 [[toc]]
 

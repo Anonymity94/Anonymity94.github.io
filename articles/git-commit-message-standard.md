@@ -7,7 +7,7 @@ tags:
 
 # Git 提交信息（commit message）规范
 
-<ArticleMeta />
+
 
 ::: tip 小贴士
 如果 type 为 `feat` 或 `fix`，则该 commit 将肯定出现在 Change log 之中

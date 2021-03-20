@@ -7,7 +7,7 @@ tags:
 
 # 统计代码行数工具
 
-<ArticleMeta />
+
 
 - [Tokei](https://github.com/XAMPPRocky/tokei)
 - [cloc](https://github.com/AlDanial/cloc)

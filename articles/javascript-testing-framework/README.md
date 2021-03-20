@@ -6,7 +6,7 @@ tags:
 
 # 前端测试框架
 
-<ArticleMeta />
+
 
 > [Demo 源码](https://github.com/Anonymity94/junit-demo)
 

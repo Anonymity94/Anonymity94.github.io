@@ -6,7 +6,7 @@ tags:
 
 # Kibana 源码解析
 
-<ArticleMeta />
+
 
 Kibana是开源的，我们可以从[elastic/kibana](https://github.com/elastic/kibana)中找到相关源码，这里我们选择`7.4.2`版本。
 

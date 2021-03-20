@@ -6,7 +6,7 @@ tags:
 
 # Host key verification failed
 
-<ArticleMeta />
+
 
 公司切换了代码托管平台，连接远程仓库的时候出现了下述错误
 

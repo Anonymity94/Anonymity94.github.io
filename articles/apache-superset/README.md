@@ -7,8 +7,6 @@ tags:
 
 # Superset
 
-<ArticleMeta />
-
 
 ## 安装
 ```sh

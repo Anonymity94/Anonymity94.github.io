@@ -6,7 +6,7 @@ tags:
 
 # ETCD测试
 
-<ArticleMeta />
+
 
 ## 下载
 

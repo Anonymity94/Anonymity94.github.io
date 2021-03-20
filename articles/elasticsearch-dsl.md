@@ -6,7 +6,7 @@ tags:
 
 # Elasticsearch 搜索语句
 
-<ArticleMeta />
+
 
 ## `sum`
 

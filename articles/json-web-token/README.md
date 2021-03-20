@@ -6,7 +6,7 @@ tags:
 
 # JWT - JSON Web Token
 
-<ArticleMeta />
+
 
 ## 什么是 JWT
 

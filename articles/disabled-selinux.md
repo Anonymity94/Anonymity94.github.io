@@ -6,7 +6,7 @@ tags:
 
 # 关闭 SELinux
 
-<ArticleMeta />
+
 
 ## 问题起源
 

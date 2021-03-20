@@ -6,7 +6,7 @@ tags:
 
 # Git Rebase
 
-<ArticleMeta />
+
 
 `commit` 记录太丑，想用 `rebase` 命令合并一下~
 

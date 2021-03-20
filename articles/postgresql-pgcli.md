@@ -6,7 +6,7 @@ tags:
 
 # PostgreSQL命令行工具 - pgcli
 
-<ArticleMeta />
+
 
 ## 连接数据库
 

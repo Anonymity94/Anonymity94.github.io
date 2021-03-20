@@ -6,7 +6,7 @@ tags:
 
 # Mongo副本集
 
-<ArticleMeta />
+
 
 > 安装参考：
 > [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/)

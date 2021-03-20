@@ -7,6 +7,6 @@ tags:
 
 # [转载]Tasks, microtasks, queues and schedules
 
-<ArticleMeta />
+
 
 [https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
