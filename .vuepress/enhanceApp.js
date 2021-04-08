@@ -36,6 +36,7 @@ export default ({
   const articles = siteData.pages
     .map(article => ({
       ...article,
+      hide: article.frontmatter.hide || false,
       tags: article.frontmatter.tags || [],
       createTime: article.frontmatter.createTime || '',
       createYear: article.frontmatter.createTime
@@ -44,6 +45,7 @@ export default ({
     }))
     .filter(
       page =>
+        !page.hide && 
         page.path.indexOf(articlePathKeyword) > -1 &&
         page.path !== articlePathKeyword
     )
