@@ -15,7 +15,7 @@ sidebar: auto
 - [冴羽的博客](https://github.com/mqyqingfeng/Blog)
 - [深入理解 JavaScript 系列 - 汤姆大叔的博客](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)
 - [前端基础进阶系列](https://www.jianshu.com/p/cd3fee40ef59)
-- [面试图谱](https://yuchengkai.cn/docs/)
+- [面试图谱](https://yuchengkai.cn/)
 - [前端面试每日 3+1](https://github.com/haizlin/fe-interview)
 - [前端面试与进阶指南](https://www.cxymsg.com/)
 - [蚂蚁、字节、滴滴面试经历总结(都已过)](https://mp.weixin.qq.com/s/gIpwgL3TJpId955g2eSBRA)
