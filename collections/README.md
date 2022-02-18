@@ -191,6 +191,7 @@ sidebar: auto
 ## TypeSctipt
 
 - [官网](http://www.typescriptlang.org/index.html)
+- [TypeScript4 中文文档](http://ts.yayujs.com/learn-typescript/)
 - [TypeScript Handbook（中文版）](https://zhongsp.gitbooks.io/typescript-handbook/content/)
 - [TypeScript 入门教程](https://ts.xcatliu.com/)
 - [TS 常见问题整理（60 多个，持续更新 ing）](https://juejin.cn/post/6844904055039344654)
