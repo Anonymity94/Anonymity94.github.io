@@ -105,6 +105,8 @@ console.log(
 - 一个非定高、非定宽的元素如何实现在窗口垂直居中、左右居中
 - content-length 的含义
 - cookie 和 localStorage 的区别
+- addEventListener 的执行顺序
+- 如果使用 `useCapture = true`, 一个 div 里面包含一个 Button，2 个元素都绑定点击事件，点击 Button 的时候，执行顺序是什么
 - 编程题
 
 ```js
