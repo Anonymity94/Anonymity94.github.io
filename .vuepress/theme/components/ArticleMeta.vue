@@ -34,7 +34,11 @@
           ></path>
         </svg>
       </span>
-      <span itemprop="dateCreated" :datetime="$frontmatter.createTime">
+      <span
+        itemprop="dateCreated"
+        title="发表时间"
+        :datetime="$frontmatter.createTime"
+      >
         {{ new Date($frontmatter.createTime).format("YYYY-MM-DD") }}
       </span>
     </div>
@@ -58,30 +62,30 @@
 export default {
   components: {},
   props: {},
-  data () {
-    return {
-    }
+  data() {
+    return {};
   },
   watch: {},
   computed: {},
   methods: {},
-  created () { },
-  mounted () {
-  }
-}
+  created() {},
+  mounted() {},
+};
 </script>
 <style lang="less" scoped>
 .post-meta {
+  display: flex;
   margin: 10px 0;
   color: #909399;
   max-width: 860px;
   margin: 0 auto;
   padding-top: 4.6rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   height: 30px;
-  line-height: 30px;
 }
 .post-time {
-  display: inline-block;
+  margin-right: 10px;
 }
 .post-meta-item-text {
   vertical-align: sub;
@@ -93,12 +97,22 @@ export default {
   vertical-align: top;
 }
 @media (max-width: 719px) {
-  .post-time {
-    margin-bottom: 10px;
-  }
   .post-category {
     display: block;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 959px) {
+  .post-meta {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 419px) {
+  .post-meta {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 </style>

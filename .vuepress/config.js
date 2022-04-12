@@ -1,4 +1,5 @@
 const path = require('path');
+const dayjs = require("dayjs");
 
 function resolve(dir) {
     return path.join(__dirname, dir);
@@ -61,6 +62,14 @@ module.exports = {
         '@vuepress/active-header-links',
         ['@vuepress/back-to-top', true],
         ['@vuepress/medium-zoom', true],
+        [
+            '@vuepress/last-updated',
+            {
+              transformer: (timestamp, lang) => {
+                return dayjs(timestamp).format("YYYY-MM-DD HH:mm:ss");
+              }
+            }
+        ]
     ],
     markdown: {
         lineNumbers: true, // 是否显示行号

@@ -2,32 +2,31 @@
   <div class="posts">
     <section
       class="post-preview"
-      v-bind:class="{showYear: showYear}"
+      v-bind:class="{ showYear: showYear }"
       v-for="(item, index) in articles"
     >
       <div
         class="seperator"
-        v-if="showYear && (index === 0 || (index >=1 && item.createYear !== articles[index - 1].createYear))"
+        v-if="
+          showYear &&
+          (index === 0 ||
+            (index >= 1 && item.createYear !== articles[index - 1].createYear))
+        "
       >
         <span class="text">{{ item.createYear }}</span>
       </div>
-      <div
-        class="post-item"
-        :data-tags="item.tags"
-      >
-        <h1
-          class="post-item-title"
-          itemprop="name headline"
-        >
-          <router-link
-            :to="item.regularPath"
-            class="post-item-title-link"
-          >{{ item.title || '[标题丢失了]' }}</router-link>
+      <div class="post" :data-tags="item.tags">
+        <h1 class="post-title" itemprop="name headline">
+          <router-link :to="item.regularPath" class="post-title-link">{{
+            item.title || "[标题丢失了]"
+          }}</router-link>
         </h1>
         <span
+          class="post-time"
           v-if="item.createTime"
           :datetime="item.createTime"
-        >{{ new Date(item.createTime).format('YYYY-MM-DD') }}</span>
+          >{{ new Date(item.createTime).format("YYYY-MM-DD") }}</span
+        >
       </div>
     </section>
     <section v-if="articles.length === 0">
@@ -39,35 +38,33 @@
 </template>
 
 <script>
-import emptyImg from '@static/assets/empty.svg'
+import emptyImg from "@static/assets/empty.svg";
 
 export default {
   components: {},
   props: {
-    'articles': {
+    articles: {
       type: Array,
       required: true,
-      default: []
+      default: [],
     },
-    'showYear': {
+    showYear: {
       type: Boolean,
       required: false,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
-      emptyImg
-    }
+      emptyImg,
+    };
   },
   watch: {},
   computed: {},
   methods: {},
-  created() {
-  },
-  mounted() {
-  }
-}
+  created() {},
+  mounted() {},
+};
 </script>
 <style lang="less" scoped>
 .posts {
@@ -75,20 +72,20 @@ export default {
   padding: 0;
 
   .post-preview {
-    &.showYear .post-item {
+    &.showYear .post {
       margin-left: 20px;
     }
-    & > .seperator + .post-item {
+    & > .seperator + .post {
       border-top: none;
     }
     &:first-child {
-      .post-item {
+      .post {
         border-top: none;
       }
     }
   }
 
-  .post-item {
+  .post {
     border-top: 1px solid #eee;
     padding: 5px 0;
     display: flex;
@@ -102,13 +99,14 @@ export default {
   }
 }
 
-.post-item-title {
+.post-title {
+  flex: 1 1 auto;
   position: relative;
   font-size: 18px;
   font-weight: 400;
   margin-top: 20px;
 
-  .post-item-title-link {
+  .post-title-link {
     display: inline-block;
     position: relative;
     color: #555;
@@ -144,6 +142,11 @@ export default {
       transform: scaleX(1);
     }
   }
+}
+
+.post-time {
+  flex: 0 0 90px;
+  text-align: right;
 }
 
 .seperator {
