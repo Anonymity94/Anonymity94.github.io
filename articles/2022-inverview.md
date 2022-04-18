@@ -119,7 +119,7 @@ console.log(obj.test2());
 - 编程题：[42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
 - 从 URL 输入到页面渲染全过程
 - TCP 和 UDP 的区别
-- 生成 DOM 树 + CSS 树之后的过程，越详细越好（没太明白问的什么）
+- 生成 DOM 树 + CSS 树之后的过程，越详细越好
 - 如何减少回流、重绘，充分利用 GPU 加速渲染？
 - 设计一个前端架构会考虑什么？换个角度问：考虑产品的可迭代性会考虑哪些因素？
 - 自己的职业发展
