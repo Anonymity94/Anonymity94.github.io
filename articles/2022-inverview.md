@@ -23,8 +23,7 @@ tags:
 - 算法题：[LeetCode-56. 合并区间](https://leetcode-cn.com/problems/merge-intervals/)
 - 反问环节
   - 部门业务：大数据、可视化、自检、巡检
-  - 根据面试过程，麻烦给出建议：知识面很广，底子很好，希望能保持对源码的深入，成为某个领域的专家
-  - 是否方便给面试过程打分：技术 7 分，表达能力满分
+  - 根据面试过程，麻烦给出建议
 
 ## 字节跳动
 
@@ -110,11 +109,14 @@ console.log(obj.test2());
 
 - 编程题
 
+> 相关题目 [17. 电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
+
 ```
 回溯 + 剪枝
 实现 `fn([['a','b'],['m','n'],['0','1']])` 排列
 输出：['am0', 'am1', 'an0', 'an1', ....]
 输出结果不是全排列，字符串重复的只保留一个，例如 'am0' 'ma0' 属于重复
+
 ```
 
 - 编程题：[42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
