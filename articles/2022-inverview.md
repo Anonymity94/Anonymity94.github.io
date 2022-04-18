@@ -82,3 +82,44 @@ for (var i = 0; i < 6; i++) {
 随机选一个点比如 5，反转变成：5，6，7，1，2，3，4
 对于上面翻转后的数组，求它的中位数。
 ```
+
+### 三面
+
+- 自我介绍
+- 介绍项目中的前端部分
+- 看输出
+
+```js
+var length = 10;
+function fn() {
+  return this.length + 1;
+}
+var obj = {
+  length: 5,
+  test1: function() {
+    return fn();
+  }
+};
+obj.test2 = fn;
+
+console.log(obj.test1.call());
+console.log(obj.test1());
+console.log(obj.test2.call());
+console.log(obj.test2());
+```
+
+- 编程题
+
+```
+回溯 + 剪枝
+实现 `fn([['a','b'],['m','n'],['0','1']])` 排列
+输出结果不是全排列，字符串重复的只保留一个，例如 'am0' 'ma0' 属于重复
+```
+
+- 编程题：[42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
+- 从 URL 输入到页面渲染全过程
+- TCP 和 UDP 的区别
+- 生成 DOM 树 + CSS 树之后的过程，越详细越好（没太明白问的什么）
+- 如何减少回流、重绘，充分利用 GPU 加速渲染？
+- 设计一个前端架构会考虑什么？换个角度问：考虑产品的可迭代性会考虑哪些因素？
+- 自己的职业发展
