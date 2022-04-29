@@ -85,13 +85,13 @@ tags:
 
 ### 流程简介
 
-界面 UI => JSON Scheme => 查询 SQL
+界面 UI => JSON Schema => 查询 SQL
 
 - Chart UI
 
 ![new-chart-ui](./superset-new-chart-ui.png)
 
-- JSON Scheme
+- JSON Schema
 
 ![new-chart-json](./superset-new-chart-json.png)
 
